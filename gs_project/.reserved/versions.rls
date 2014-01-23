@@ -1,0 +1,17 @@
+<Version=1.0>
+<Versions=
+	<Version=
+		<Name="Default">
+		<ExecProject=True>
+		<Collect=
+			<Entry=
+				<Path="$(Project)">
+				<HintUI=False>
+				<HintRAW=False>
+			>
+		>
+		<Exclude=
+			<Path=".reserved; .svn; .cvs; .git">
+		>
+	>
+>
