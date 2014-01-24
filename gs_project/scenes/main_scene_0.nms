@@ -1809,7 +1809,7 @@
 		>
 		<MObject=
 			<MItem=
-				<Id="player_display">
+				<Id="player_direction">
 				<UId=26>
 				<Active>
 				<Priority=0.500000>
@@ -1829,15 +1829,8 @@
 			>
 			<Object=
 				<Item=
-					<Position=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=0.129885>
-					>
-					<Scale=
-						<X=1.456261>
-						<Y=0.666056>
-						<Z=0.463622>
+					<ItemFlag=
+						<LinkOnlyPosition>
 					>
 					<Target=
 						<X=0.000000>
@@ -1847,7 +1840,7 @@
 					<RotationOrder="YXZ">
 					<Registry>
 				>
-				<Geometry="assets/cube.nmg">
+				<Geometry="">
 				<CacheGeometry=True>
 			>
 		>
@@ -1922,7 +1915,6 @@
 						<Y=0.000000>
 						<Z=3.776090>
 					>
-					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -1962,7 +1954,6 @@
 						<Y=1.000000>
 						<Z=0.000000>
 					>
-					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -2310,6 +2301,51 @@
 				<VolumetricRange=8.000000>
 			>
 		>
+		<MObject=
+			<MItem=
+				<Id="player_display">
+				<UId=33>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=0.111975>
+					>
+					<Scale=
+						<X=1.608109>
+						<Y=1.000000>
+						<Z=0.412139>
+					>
+					<ItemFlag>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="assets/cube.nmg">
+				<CacheGeometry=True>
+			>
+		>
 	>
 	<Links=
 		<Link=
@@ -2335,6 +2371,10 @@
 		<Link=
 			<Item=32>
 			<Link=31>
+		>
+		<Link=
+			<Item=33>
+			<Link=26>
 		>
 	>
 	<Constraints>

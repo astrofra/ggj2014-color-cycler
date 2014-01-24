@@ -17,6 +17,13 @@ class	Player
 	pad_heading			=	0
 	velocity			=	0
 	angular_velocity	=	0
+	vector_front		=	0
+
+	direction_item		=	0
+	angle				=	0
+	direction_overide	=	0.0
+
+	item_matrix			=	0
 
 	strength			=	100.0
 	angular_strength	=	5.0
@@ -33,8 +40,12 @@ class	Player
 		pad_heading = Vector(0,0,0)
 		velocity = Vector(0,0,0)
 		angular_velocity = Vector(0,0,0)
+		vector_front = Vector(0,0,1)
+		item_matrix = ItemGetMatrix(item)
 
 		pad_device = GetInputDevice("xinput0")
+
+		direction_item = ItemGetChild(item, "player_direction")
 	}
 
 	function	OnUpdate(item)
@@ -47,7 +58,16 @@ class	Player
 			pad_heading.z = DeviceInputValue(pad_device, DeviceAxisT)
 		}
 
-//		DumpVector(pad_heading, "pad_heading")
+		if (fabs(pad_heading.z) > 0.0)
+			direction_overide = Clamp(direction_overide + g_dt_frame, 0.0, 1.0)
+		else
+			direction_overide = Clamp(direction_overide - g_dt_frame, 0.0, 1.0)
+
+		angle = Vector(0,0,1).AngleWithVector(pad_vector) * ((Vector(0,0,1).Cross(pad_vector)).y < 0.0?-1.0:1.0)
+		ItemSetRotation(direction_item, Vector(0, angle, 0))
+
+		DumpVector(pad_vector, "pad_vector")
+		print("angle = " + angle)
 	}
 
 	function	OnPhysicStep(item, dt)
@@ -57,14 +77,15 @@ class	Player
 
 		velocity = ItemGetLinearVelocity(item)
 		angular_velocity = ItemGetAngularVelocity(item)
+		item_matrix = ItemGetMatrix(item)
 
 		_force = pad_vector - velocity.Scale(0.25)
 		_force = _force.Scale(strength)
 
-		_angular_force = pad_heading.x - angular_velocity.y * 0.25
+//		_angular_force = pad_heading.x - angular_velocity.y * 0.25
 
 		ItemApplyLinearForce(item, _force)
-		ItemApplyTorque(item, Vector(0,_angular_force * PI * angular_strength,0))
+//		ItemApplyTorque(item, Vector(0,_angular_force * PI * angular_strength,0))
 		
 	}
 }
