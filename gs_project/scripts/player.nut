@@ -59,14 +59,21 @@ class	Player
 		}
 
 		if (fabs(pad_heading.z) > 0.0)
-			direction_overide = Clamp(direction_overide + g_dt_frame, 0.0, 1.0)
+			direction_overide = Clamp(direction_overide + 10.0 * g_dt_frame, 0.0, 1.0)
 		else
-			direction_overide = Clamp(direction_overide - g_dt_frame, 0.0, 1.0)
+			direction_overide = Clamp(direction_overide - 0.5 * g_dt_frame, 0.0, 1.0)
 
-		angle = Vector(0,0,1).AngleWithVector(pad_vector) * ((Vector(0,0,1).Cross(pad_vector)).y < 0.0?-1.0:1.0)
+		local	pad_lead_vector = pad_vector.Lerp(direction_overide, pad_heading)
+
+		local	angle_from_pad_vector = Vector(0,0,1).AngleWithVector(pad_vector.Normalize()) * ((Vector(0,0,1).Cross(pad_vector.Normalize())).y < 0.0?-1.0:1.0)
+		local	angle_from_pad_heading = Vector(0,0,1).AngleWithVector(pad_heading.Normalize()) * ((Vector(0,0,1).Cross(pad_heading.Normalize())).y < 0.0?-1.0:1.0)
+
+		angle = Lerp(direction_overide, angle_from_pad_vector, angle_from_pad_heading)
+
 		ItemSetRotation(direction_item, Vector(0, angle, 0))
 
 		DumpVector(pad_vector, "pad_vector")
+		DumpVector(pad_heading, "pad_heading")
 		print("angle = " + angle)
 	}
 
