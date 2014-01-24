@@ -10,6 +10,7 @@ class	SoundEmitter
 		<near_distance = <Name = "Near distance (m)"> <Type = "Float"> <Default = 10.0>>
 		<far_distance = <Name = "Far distance (m)"> <Type = "Float"> <Default = 50.0>>
 		<receptor_item = <Name = "Receptor Item"> <Type = "String"> <Default = "player">>
+		<vibrate_enabled = <Name = "Vibrate"> <Type = "Bool"> <Default = True>>
 	>
 >*/
 
@@ -21,6 +22,7 @@ class	SoundEmitter
 	near_distance	=	Mtr(10.0)
 	far_distance	=	Mtr(50.0)
 	receptor_item	=	"player"
+	vibrate_enabled =	true
 
 	sfx_mixer		=	0
 	sfx_channel		=	-1
@@ -68,7 +70,14 @@ class	SoundEmitter
 		local	_current_pos = ItemGetWorldPosition(receptor_item)
 		local	_dist = _current_pos.Dist(ItemGetWorldPosition(item))
 		local	_vol = Clamp(RangeAdjust(_dist, near_distance, far_distance, sound_volume, 0.0), 0.0, sound_volume)
-		MixerChannelSetGain(sfx_mixer, sfx_channel, _vol)	
+		MixerChannelSetGain(sfx_mixer, sfx_channel, _vol)
+		if (vibrate_enabled && ItemGetScriptInstanceCount(receptor_item) > 0)
+			if ("pad_device" in ItemGetScriptInstance(receptor_item))
+			{
+				local	pad_device = ItemGetScriptInstance(receptor_item).pad_device
+				if (pad_device != 0)
+					DeviceSetEffect(pad_device, DeviceEffectVibrate, _vol)
+			}
 	}
 
 	function	OnDelete(item)
