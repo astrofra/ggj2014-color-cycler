@@ -6,6 +6,7 @@ class	ProjectHandler
 	reload					=	false
 	scene_filename			=	"scenes/preloader.nms"
 	scene					=	0
+	level					=	0
 
 	function	OnSetup(project)
 	{
@@ -41,10 +42,10 @@ class	ProjectHandler
 		reload = false
 	}
 
-	function	LoadDemo()
+	function	LoadGame()
 	{
 		UISetGlobalFadeEffect(SceneGetUI(g_scene), 1.0)	//	Fade out the whole screen
-		scene_filename = "scenes/main_scene.nms"
+		scene_filename = "scenes/main_scene_" + level.tostring() + ".nms"
 		reload = true
 	}
 }
