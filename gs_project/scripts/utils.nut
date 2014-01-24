@@ -8,6 +8,9 @@ g_vector_blue		<-	Vector(0.05,0.15,0.5)
 g_vector_cyan		<-	Vector(0.05,0.7,0.75)
 g_vector_orange		<-	Vector(1.0, 0.75, 0.0)
 
+function	DumpVector(_v = Vector(0,0,0), _name = "vector")
+{	print(_name + " = (" + _v.x.tostring() + ", " +  _v.y.tostring() + ", " +  _v.z.tostring() + ")")	}
+
 function	GenerateSquareFlicker(frequency = 60) // In Hz
 {
 	local	phase = (g_clock / 10000.0) * 2 * PI * frequency
