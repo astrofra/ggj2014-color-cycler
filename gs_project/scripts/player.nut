@@ -16,7 +16,7 @@ class	Player
 	pad_vector			=	0
 	velocity			=	0
 
-	strength			=	20.0
+	strength			=	100.0
 
 	function	OnSetup(item)
 	{
@@ -47,8 +47,11 @@ class	Player
 		local	_force = Vector(0,0,0)
 		velocity = ItemGetLinearVelocity(item)
 
-		_force += pad_vector.Scale(strength)
-		_force -= velocity.Scale(strength * (1.0 - Clamp(pad_vector.Len(), 0.0, 1.0)))
+		_force = pad_vector - velocity.Scale(0.25)
+		_force = _force.Scale(strength)
+
+//		_force += pad_vector.Scale(strength)
+//		_force -= velocity.Scale(strength * (1.0 - Clamp(pad_vector.Len(), 0.0, 1.0)))
 
 		ItemApplyLinearForce(item, _force)
 		
