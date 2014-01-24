@@ -29,6 +29,7 @@
 						<Y=1.000000>
 						<Z=10.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -73,14 +74,22 @@
 						<Y=0.000000>
 						<Z=0.000000>
 					>
-					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
 						<Z=1.000000>
 					>
 					<RotationOrder="YXZ">
-					<Registry>
+					<Registry=
+						<PostProcess=
+							<Bloom=
+								<Strength=5.000000>
+								<Radius=20.000000>
+								<Threshold=0.500000>
+								<Exponent=12.000000>
+							>
+						>
+					>
 				>
 				<ZNear=1.000000>
 				<ZFar=500.000000>
@@ -96,6 +105,12 @@
 				<Priority=0.500000>
 				<MotionPlayer=
 					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/camera.nut">
+						<Class="CameraHandler">
+					>
 				>
 				<PhysicItem=
 					<SelfMask=1>
@@ -1628,6 +1643,32 @@
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
 						>
+						<PhysicShape=
+							<Type="Heightmap">
+							<Position=
+								<X=0.000000>
+								<Y=0.000000>
+								<Z=0.000000>
+							>
+							<Rotation=
+								<X=0.000000>
+								<Y=0.000000>
+								<Z=0.000000>
+							>
+							<Scale=
+								<X=1.000000>
+								<Y=1.000000>
+								<Z=1.000000>
+							>
+							<Dimensions=
+								<X=1.000000>
+								<Y=1.000000>
+								<Z=1.000000>
+							>
+							<StaticFriction=0.500000>
+							<DynamicFriction=0.500000>
+							<Restitution=0.500000>
+						>
 					>
 				>
 			>
@@ -1727,11 +1768,55 @@
 				<VolumetricRange=8.000000>
 			>
 		>
+		<MObject=
+			<MItem=
+				<Id="light_handler">
+				<UId=25>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/light.nut">
+						<Class="LightHandler">
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
 	>
 	<Links=
 		<Link=
 			<Item=1>
 			<Link=2>
+		>
+		<Link=
+			<Item=24>
+			<Link=25>
 		>
 	>
 	<Constraints>

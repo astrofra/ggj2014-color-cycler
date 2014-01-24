@@ -15,6 +15,8 @@ class	Player
 	pad_device			=	0
 	pad_vector			=	0
 
+	strength			=	10.0
+
 	function	OnSetup(item)
 	{
 		ItemPhysicSetLinearFactor(item, Vector(1,0,1))
@@ -35,10 +37,11 @@ class	Player
 			pad_vector.z = DeviceInputValue(pad_device, DeviceAxisY)
 		}
 
-		DumpVector(pad_vector, "pad_vector")
+		//DumpVector(pad_vector, "pad_vector")
 	}
 
 	function	OnPhysicStep(item, dt)
 	{
+		ItemApplyLinearForce(item, pad_vector.Scale(strength))
 	}
 }

@@ -8,6 +8,45 @@ g_vector_blue		<-	Vector(0.05,0.15,0.5)
 g_vector_cyan		<-	Vector(0.05,0.7,0.75)
 g_vector_orange		<-	Vector(1.0, 0.75, 0.0)
 
+//------------------
+class LinearFilter
+//------------------
+{
+
+	filter_size = 0
+	values = 0
+
+	constructor(_size = 30)
+	{
+		filter_size = _size
+		values = []
+	}
+
+	function SetNewValue(val)
+	{
+		values.append(val)
+		if (values.len() > filter_size)
+			values.remove(0)
+	}
+
+	function GetFilteredValue()
+	{
+		local filtered_value
+		if ((typeof values[0]) == "float")
+			filtered_value = 0.0
+		else
+			filtered_value = Vector(0,0,0)
+
+		foreach(_v in values)
+			filtered_value += _v
+
+		filtered_value /= (values.len().tofloat())
+
+		return filtered_value
+	}
+
+}
+
 function	DumpVector(_v = Vector(0,0,0), _name = "vector")
 {	print(_name + " = (" + _v.x.tostring() + ", " +  _v.y.tostring() + ", " +  _v.z.tostring() + ")")	}
 
