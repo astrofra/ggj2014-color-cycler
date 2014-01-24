@@ -18,10 +18,12 @@ class	LightHandler
 
 	function	OnSetup(item)
 	{
+		print("LightHandler::OnSetup()")
+
 		y_pos = ItemGetPosition(item).y
 		target_item = SceneFindItem(g_scene, "player")
 		target_pos = ItemGetPosition(target_item)
-		filtered_target_pos = LinearFilter(120)
+		filtered_target_pos = LinearFilter(15)
 	}
 
 	function	OnUpdate(item)
