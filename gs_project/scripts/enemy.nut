@@ -217,6 +217,7 @@ class	EnemyHandler
 
 		if (life <= 0.0)
 		{
+			SceneGetScriptInstance(g_scene).DecreaseEnemyCount()
 			dying = true
 			dispatch = Explode
 		}

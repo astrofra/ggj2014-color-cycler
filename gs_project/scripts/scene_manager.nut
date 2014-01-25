@@ -13,6 +13,7 @@ class	SceneManager
 {
 	ui					=	0
 	life_bar			=	0
+	enemy_count_label	=	0
 	game_over			=	0
 
 	dispatch			=	0
@@ -20,6 +21,7 @@ class	SceneManager
 	player_script		=	0
 
 	wave				=	0
+	enemy_count			=	0
 	wave_label			=	0
 
 	function	OnSetup(scene)
@@ -38,6 +40,14 @@ class	SceneManager
 		life_label.font = "visitor1"
 		life_label.font_size = 48
 		life_label.refresh()
+
+		enemy_count_label = Label(ui, TextureGetWidth(texture), TextureGetHeight(texture), SpriteGetPosition(life_bar).x + TextureGetWidth(texture) + 8.0, SpriteGetPosition(life_bar).y - 4)
+		enemy_count_label.label = "00 ENEMY"
+		enemy_count_label.label_color = 0xffffffff
+		enemy_count_label.font = "visitor1"
+		enemy_count_label.font_size = 48
+		enemy_count_label.refresh()
+		SpriteSetOpacity(enemy_count_label.window, 0.5)
 
 		game_over = Label(ui, 1280, 512, (1280 - 1280) * 0.5, (960 - 512) * 0.5)
 		game_over.label = "COLORCYCLER\nIS OVER"
@@ -132,13 +142,17 @@ class	SceneManager
 		wave_label.refresh()
 		WindowSetCommandList(wave_label.window, "toalpha 0,0;toalpha 0.2,1.0;nop 0.25;toalpha 0.2,0.0;")
 
+		enemy_count = 0
 		foreach(_item in SceneGetItemList(g_scene))
 			if (_item != null && ObjectIsValid(_item) && ItemGetName(_item) != null && (ItemGetName(_item) == "enemy_generator_" + wave.tostring()))
 				if (ItemGetScriptInstanceCount(_item) > 0)
 				{
 					local	_script = ItemGetScriptInstance(_item)
 					_script.generator_enabled = true
+					enemy_count += _script.wave_size
 				}
+
+		RefreshEnemyCount()
 	}
 
 	function	FreezeAllWaves()
@@ -150,5 +164,17 @@ class	SceneManager
 					local	_script = ItemGetScriptInstance(_item)
 					_script.generator_enabled = false
 				}
+	}
+
+	function	DecreaseEnemyCount()
+	{
+		enemy_count--
+		RefreshEnemyCount()
+	}
+
+	function	RefreshEnemyCount()
+	{
+		enemy_count_label.label = enemy_count.tostring() + (enemy_count > 1?" ENEMIES":" ENEMY")
+		enemy_count_label.refresh()
 	}
 }
