@@ -17,6 +17,7 @@ class	EnemyHandler
 		<shooting_range = <Name = "Shooting range (m)"> <Type = "Float"> <Default = 5.0>>
 		<distance_rand = <Name = "Distance randomize (m)"> <Type = "Float"> <Default = 1.0>>
 		<max_speed = <Name = "Max speed (mtrs)"> <Type = "Float"> <Default = 5.0>>
+		<life = <Name = "Enemy life"> <Type = "Float"> <Default = 10.0>>
 		<strength = <Name = "Force strength"> <Type = "Float"> <Default = 10.0>>
 		<inertia = <Name = "Force inertia"> <Type = "Float"> <Default = 0.25>>
 		<collision_damage = <Name = "Collision damage"> <Type = "Float"> <Default = 0.25>>
@@ -51,6 +52,8 @@ class	EnemyHandler
 	strength			=	1.0
 	inertia				=	0.25
 	max_speed			=	5.0
+
+	life				=	10.0
 
 	collision_damage	=	0.25
 	hit_damage			=	1.0
@@ -208,9 +211,17 @@ class	EnemyHandler
 		if (dying)
 			return
 
+		life -= _damage
+
 		print("EnemyHandler::Hit() !!!")
-		dying = true
-		dispatch = Explode
+
+		if (life <= 0.0)
+		{
+			dying = true
+			dispatch = Explode
+		}
+		else
+			ItemSetCommandList(body, "toscale 0.0,1.0,1.0,1.0;toscale 0.05,1.1,1.1,1.1;toscale 0.05,1.0,1.0,1.0;")
 	}
 
 	function	Explode(item)
