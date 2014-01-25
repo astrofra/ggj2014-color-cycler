@@ -144,7 +144,7 @@ class	EnemyHandler
 		local	_d_min = distance_to_player * 0.9
 		local	_d_max = initial_distance_to_player
 		local	dist_ramp = RangeAdjust(Clamp(current_dist_to_player, _d_min, _d_max), _d_min, _d_max, 0.0, 1.0)
-		position_dt = position_dt.Lerp(1.0 - dist_ramp, initial_position_dt)
+//		position_dt = position_dt.Lerp((1.0 - dist_ramp) * range_enforcer, initial_position_dt)
 
 		sideway_vector = player_script.position - position
 		sideway_vector = sideway_vector.ApplyMatrix(RotationMatrixY(Deg(90.0)))
