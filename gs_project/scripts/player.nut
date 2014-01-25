@@ -6,6 +6,18 @@
 Include("scripts/utils.nut")
 Include("scripts/bullet.nut")
 
+/*
+
+Colmask : 
+
+PLAYER 10 = 2
+BULLET 01 = 1
+ENEMY  11 = 3
+WALLS  11 = 3
+
+
+*/
+
 /*!
 	@short	Player
 	@author	astrofra
@@ -86,12 +98,12 @@ class	Player
 		if (pad_vector.Len() > 0.0)
 			vector_pad_overide = Clamp(vector_pad_overide + 10.0 * g_dt_frame, 0.0, 1.0)
 		else
-			vector_pad_overide = Clamp(vector_pad_overide - 0.5 * g_dt_frame, 0.0, 1.0)
+			vector_pad_overide = Clamp(vector_pad_overide - 5.0 * g_dt_frame, 0.0, 1.0)
 
-		if (fabs(pad_heading.z) > 0.0)
+		if (pad_heading.Len() > 0.0)
 			direction_overide = Clamp(direction_overide + 10.0 * g_dt_frame, 0.0, 1.0)
 		else
-			direction_overide = Clamp(direction_overide - 0.5 * g_dt_frame, 0.0, 1.0)
+			direction_overide = Clamp(direction_overide - 5.0 * g_dt_frame, 0.0, 1.0)
 
 		local	pad_lead_vector = pad_vector.Lerp(direction_overide, pad_heading)
 

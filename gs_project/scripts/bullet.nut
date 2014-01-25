@@ -37,6 +37,8 @@ class	BulletHandler
 
 	function	OnCollision(item, with_item)
 	{
+		print("BulletHandler::OnCollision() with_item = " + ItemGetName(with_item))
+
 		if (player_script == 0)
 			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
 
@@ -64,7 +66,7 @@ class	BulletHandler
 	function	EmitHitSound(item)
 	{
 		if ("HearSfxFromLocation" in player_script)
-			player_script.HearSfxFromLocation("audio/SFX_hit.wav", ItemGetPosition(body), Mtr(40.0))
+			player_script.HearSfxFromLocation("audio/SFX_hit.wav", ItemGetPosition(body), Mtr(30.0))
 
 		dispatch = Die
 	}
@@ -114,7 +116,7 @@ class	CannonHandler
 	{
 		local	_shoot_time_interval = 1.0 / bullet_frequency
 
-		if (g_clock - shoot_timeout > SecToTick(_shoot_time_interval))
+		if (g_clock - shoot_timeout > SecToTick(_shoot_time_interval) && direction.Len() > 0)
 		{
 			local	_new_bullet = SceneDuplicateItem(g_scene, original_bullet)
 			ItemRenderSetup(_new_bullet, g_factory)
