@@ -23,6 +23,8 @@ class	Player
 	pad_device			=	0
 	pad_vector			=	0
 	pad_heading			=	0
+
+	position			=	0
 	velocity			=	0
 	angular_velocity	=	0
 	vector_front		=	0
@@ -42,6 +44,8 @@ class	Player
 	cannon				=	0
 	bullet_speed		=	1.0
 	bullet_frequency	=	15.0
+
+	sfx_table			=	0
 
 	function	OnSetup(item)
 	{
@@ -66,6 +70,7 @@ class	Player
 		cannon = CannonHandler()
 		cannon.bullet_speed = bullet_speed
  		cannon.bullet_frequency	= bullet_frequency
+		sfx_table = {}
 	}
 
 	function	OnUpdate(item)
@@ -122,6 +127,8 @@ class	Player
 		local	_force = Vector(0,0,0)
 		local	_angular_force = Vector(0,0,0)
 
+		position = ItemGetPosition(item)
+
 		velocity = ItemGetLinearVelocity(item)
 		angular_velocity = ItemGetAngularVelocity(item)
 		item_matrix = ItemGetMatrix(item)
@@ -139,5 +146,23 @@ class	Player
 	function	Hit()
 	{
 		print("Player::Hit() !!!!")
+	}
+
+	function	HearSfxFromLocation(_sound_filename = "", _pos = Vector(0,0,0), far_distance = Mtr(15.0), sound_volume = 1.0)
+	{
+		local	near_distance = Mtr(5.0)
+
+		if (_sound_filename != "" && FileExists(_sound_filename))
+		{
+			if (!(SHA1(_sound_filename) in sfx_table))
+				sfx_table.rawset(SHA1(_sound_filename), ResourceFactoryLoadSound(g_factory, _sound_filename))
+
+			local	_dist = _pos.Dist(position)
+			local	_chan = MixerPlaySound(g_mixer, sfx_table[SHA1(_sound_filename)])
+			local	_vol = Clamp(RangeAdjust(_dist, near_distance, far_distance, sound_volume, 0.0), 0.0, sound_volume)
+			MixerChannelSetGain(g_mixer, _chan, _vol)
+			MixerChannelSetLoopMode(g_mixer, _chan, LoopNone)
+			MixerChannelSetPitch(g_mixer, _chan, Rand(0.8, 1.2))
+		}
 	}
 }

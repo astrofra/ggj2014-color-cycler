@@ -9,9 +9,11 @@
 */
 class	BulletHandler
 {
-	body		=	0
-	alive		=	true
-	velocity	=	0
+	player_script	=	0
+	body			=	0
+	alive			=	true
+	velocity		=	0
+	dispatch		=	0
 
 	function	OnSetup(item)
 	{
@@ -27,8 +29,17 @@ class	BulletHandler
 		velocity = Vector(0,0,0)
 	}
 
+	function	OnUpdate(item)
+	{
+		if (dispatch != 0)
+			dispatch(item)
+	}
+
 	function	OnCollision(item, with_item)
 	{
+		if (player_script == 0)
+			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
+
 		//	This should not happen, just in case...
 		if (ObjectIsSame(with_item, body))
 		{
@@ -43,22 +54,31 @@ class	BulletHandler
 				_with_item_script.Hit()
 		}
 
-		Die()
+		dispatch = EmitHitSound
 	}
 
 	function	OnPhysicStep(item, dt)
 	{
 	}
 
-	function	Die()
+	function	EmitHitSound(item)
 	{
-//		SceneItemActivateHierarchy(g_scene, body, false)
+		if ("HearSfxFromLocation" in player_script)
+			player_script.HearSfxFromLocation("audio/SFX_hit.wav", ItemGetPosition(body), Mtr(40.0))
+
+		dispatch = Die
+	}
+
+	function	Die(item)
+	{
+		dispatch = 0
 		SceneDeleteItem(g_scene, body)
 	}
 }
 
 class	CannonHandler
 {
+	player_script	=	0
 	position			=	0
 	direction			=	0
 	original_bullet		=	0
@@ -70,6 +90,9 @@ class	CannonHandler
 
 	constructor(_bullet_item_name = "original_bullet")
 	{
+		if (player_script == 0)
+			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
+
 		original_bullet = SceneFindItem(g_scene, _bullet_item_name)
 		pos_y = ItemGetPosition(original_bullet).y
 
@@ -101,6 +124,9 @@ class	CannonHandler
 			ItemSetPosition(_new_bullet, _pos)
 			ItemPhysicResetTransformation(_new_bullet, _pos, Vector(0,0,0))
 			ItemApplyLinearImpulse(_new_bullet, direction.Normalize().Scale(bullet_speed))
+
+			if ("HearSfxFromLocation" in player_script)
+				player_script.HearSfxFromLocation("audio/SFX_lasershot.wav", position)
 
 			shoot_timeout = g_clock
 		}
