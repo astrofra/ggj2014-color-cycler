@@ -11,7 +11,6 @@ class	BulletHandler
 {
 	player_script	=	0
 	body			=	0
-	alive			=	true
 	velocity		=	0
 	dispatch		=	0
 
@@ -25,7 +24,6 @@ class	BulletHandler
 		ItemSetLinearDamping(item, 0)
 		ItemSetAngularDamping(item, 0)
 
-		alive		=	true
 		velocity = Vector(0,0,0)
 	}
 
@@ -66,7 +64,7 @@ class	BulletHandler
 	function	EmitHitSound(item)
 	{
 		if ("HearSfxFromLocation" in player_script)
-			player_script.HearSfxFromLocation("audio/SFX_hit.wav", ItemGetPosition(body), Mtr(30.0))
+			player_script.HearSfxFromLocation("audio/SFX_hit.wav", ItemGetPosition(item), Mtr(30.0))
 
 		dispatch = Die
 	}
@@ -74,7 +72,7 @@ class	BulletHandler
 	function	Die(item)
 	{
 		dispatch = 0
-		SceneDeleteItem(g_scene, body)
+		SceneDeleteItem(g_scene, item)
 	}
 }
 
