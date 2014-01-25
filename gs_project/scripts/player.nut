@@ -4,6 +4,7 @@
 */
 
 Include("scripts/utils.nut")
+Include("scripts/bullet.nut")
 
 /*!
 	@short	Player
@@ -11,7 +12,12 @@ Include("scripts/utils.nut")
 */
 class	Player
 {
-
+/*<
+	<Parameter =
+		<strength = <Name = "Player speed"> <Type = "Float"> <Default = 100.0>>
+		<bullet_speed = <Name = "Bullet speed"> <Type = "Float"> <Default = 1.0>>
+	>
+>*/
 	pad_device			=	0
 	pad_vector			=	0
 	pad_heading			=	0
@@ -22,12 +28,16 @@ class	Player
 
 	direction_item		=	0
 	angle				=	0
+	direction			=	0
 	direction_overide	=	0.0
 
 	item_matrix			=	0
 
 	strength			=	100.0
 	angular_strength	=	5.0
+
+	cannon				=	0
+	bullet_speed		=	1.0
 
 	function	OnSetup(item)
 	{
@@ -43,10 +53,14 @@ class	Player
 		angular_velocity = Vector(0,0,0)
 		vector_front = Vector(0,0,1)
 		item_matrix = ItemGetMatrix(item)
+		direction = Vector(0,0,1)
 
 		pad_device = GetInputDevice("xinput0")
 
 		direction_item = ItemGetChild(item, "player_direction")
+
+		cannon = CannonHandler()
+		cannon.bullet_speed = bullet_speed
 	}
 
 	function	OnUpdate(item)
@@ -75,13 +89,26 @@ class	Player
 		local	angle_from_pad_heading = Vector(0,0,1).AngleWithVector(pad_heading.Normalize()) * ((Vector(0,0,1).Cross(pad_heading.Normalize())).y < 0.0?-1.0:1.0)
 
 		if ((pad_vector.Len() > 0.0) || (pad_heading.Len() > 0.0))
-			angle = Lerp(direction_overide, angle_from_pad_vector, angle_from_pad_heading)
+		{
+			if (direction_overide > 0.25)
+			{
+				angle = angle_from_pad_heading
+				direction = pad_heading.Normalize()
+			}
+			else
+			{
+				angle = angle_from_pad_vector_overide
+				direction =  pad_vector.Normalize()
+			}
+		}
 
 		ItemSetRotation(direction_item, Vector(0, angle, 0))
+		cannon.Update(ItemGetPosition(item), direction)
+		cannon.Shoot()
 
-		DumpVector(pad_vector, "pad_vector")
-		DumpVector(pad_heading, "pad_heading")
-		print("angle = " + angle)
+	//	DumpVector(pad_vector, "pad_vector")
+	//	DumpVector(pad_heading, "pad_heading")
+	//	print("angle = " + angle)
 	}
 
 	function	OnPhysicStep(item, dt)
@@ -101,5 +128,10 @@ class	Player
 		ItemApplyLinearForce(item, _force)
 //		ItemApplyTorque(item, Vector(0,_angular_force * PI * angular_strength,0))
 		
+	}
+
+	function	Hit()
+	{
+		print("Player::Hit() !!!!")
 	}
 }

@@ -1604,6 +1604,16 @@
 					<ScriptUnit=
 						<ScriptPath="scripts/player.nut">
 						<Class="Player">
+						<ParmList=
+							<Parm=
+								<Id="strength">
+								<Value=100.000000>
+							>
+							<Parm=
+								<Id="bullet_speed">
+								<Value=0.250000>
+							>
+						>
 					>
 				>
 				<PhysicItem=
@@ -2046,6 +2056,10 @@
 								<Id="pitch_random">
 								<Value=0.250000>
 							>
+							<Parm=
+								<Id="vibrate_enabled">
+								<Value=True>
+							>
 						>
 					>
 				>
@@ -2197,6 +2211,10 @@
 								<Id="pitch_random">
 								<Value=0.250000>
 							>
+							<Parm=
+								<Id="vibrate_enabled">
+								<Value=True>
+							>
 						>
 					>
 				>
@@ -2344,6 +2362,79 @@
 					<Registry>
 				>
 				<Geometry="assets/cube.nmg">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="original_bullet">
+				<UId=34>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/bullet.nut">
+						<Class="BulletHandler">
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="Dynamic">
+					<Shapes=
+						<PhysicShape=
+							<Type="Box">
+							<Position=
+								<X=0.000000>
+								<Y=0.000000>
+								<Z=0.000000>
+							>
+							<Rotation=
+								<X=0.000000>
+								<Y=0.000000>
+								<Z=0.000000>
+							>
+							<Scale=
+								<X=1.000000>
+								<Y=1.000000>
+								<Z=1.000000>
+							>
+							<Dimensions=
+								<X=1.500000>
+								<Y=1.500000>
+								<Z=1.500000>
+							>
+							<StaticFriction=0.500000>
+							<DynamicFriction=0.500000>
+							<Restitution=0.500000>
+						>
+					>
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-15.091000>
+						<Y=1.000000>
+						<Z=-4.275000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="assets/bullet.nmg">
 				<CacheGeometry=True>
 			>
 		>
