@@ -12,9 +12,9 @@
 		<Z=0.000000>
 	>
 	<Self=
-		<X=1.000000>
-		<Y=0.000000>
-		<Z=0.000000>
+		<X=0.039216>
+		<Y=0.047059>
+		<Z=0.054902>
 	>
 	<Ambient=
 		<X=0.588235>
@@ -43,11 +43,5 @@
 		<Texture="assets/BLUE.png">
 		<UV=0>
 		<Channel="Opacity">
-	>
-	<TextureStage=
-		<Index=2>
-		<Texture="assets/BLUE.png">
-		<UV=0>
-		<Channel="SelfIllum">
 	>
 >

@@ -27,6 +27,8 @@ EBULLET		01000	8
 WALLS		10000	16
 */
 
+g_color_list	<-	[Vector(1,0.1,0), Vector(0.1,1,0.1), Vector(0,0.1,1)]
+
 /*!
 	@short	Player
 	@author	astrofra
@@ -39,6 +41,7 @@ class	Player
 		<inertia = <Name = "Motion inertia [0.0, 1.0]"> <Type = "Float"> <Default = 0.25>>
 		<bullet_speed = <Name = "Bullet speed"> <Type = "Float"> <Default = 1.0>>
 		<bullet_frequency = <Name = "Bullet frequency (Hz)"> <Type = "Float"> <Default = 15.0>>
+		<color_switch_timeout = <Name = "Color switch timeout (sec)"> <Type = "Float"> <Default = 1.0>>
 	>
 >*/
 	pad_device			=	0
@@ -70,6 +73,11 @@ class	Player
 
 	life				=	0.0
 
+	main_light				=	0
+	color_index				=	0
+	color_switch_timeout	=	Sec(1.0)
+	color_switch_clock		=	0
+
 	bullet_item_name	=	"original_bullet_player"
 
 	function	OnSetup(item)
@@ -93,6 +101,8 @@ class	Player
 
 		direction_item = ItemGetChild(item, "player_direction")
 
+		main_light = ItemCastToLight(SceneFindItem(g_scene, "spot_light"))
+
 		cannon = CannonHandler(bullet_item_name)
 		cannon.bullet_speed = bullet_speed
  		cannon.bullet_frequency	= bullet_frequency
@@ -106,6 +116,16 @@ class	Player
 		ItemPhysicResetTransformation(item, _spawn_pos, Vector(0,0,0))
 		life = 100.0
 		RefreshHud()
+		color_index = 0
+		RefreshPlayerColor(item)
+		
+	}
+
+	function	RefreshPlayerColor(item)
+	{
+		print("Player::RefreshPlayerColor() : color_index = " + color_index.tostring())
+		LightSetDiffuseColor(main_light, g_color_list[color_index])
+		LightSetSpecularColor(main_light, g_color_list[color_index])
 	}
 
 	function	OnUpdate(item)
@@ -123,6 +143,22 @@ class	Player
 			pad_vector.z = DeviceInputValue(pad_device, DeviceAxisY)
 			pad_heading.x = DeviceInputValue(pad_device, DeviceAxisS)
 			pad_heading.z = DeviceInputValue(pad_device, DeviceAxisT)
+
+			if (DeviceKeyPressed(pad_device, KeyButton0))
+			{
+				if (g_clock - color_switch_clock > SecToTick(color_switch_timeout))
+				{
+					color_index++
+					if (color_index >= g_color_list.len())
+						color_index = 0
+
+					RefreshPlayerColor(item)
+
+					UISetCommandList(SceneGetUI(g_scene), "globalfade 0,0;globalfade 0.01,0.5;globalfade 0.5,0.0;globalfade 0,0;")
+
+					color_switch_clock = g_clock
+				}
+			}
 		}
 
 		if (pad_vector.Len() > 0.0)
