@@ -23,9 +23,14 @@ class	EnemyHandler
 	awaken				=	false
 	dying				=	false
 
+	body				=	0
+
 	position			=	0
 	position_dt			=	0
 	velocity			=	0
+
+	initial_position_dt	=	0
+	initial_distance_to_player	=	0
 
 	distance_to_player	=	Mtr(5.0)
 	distance_dt			=	0.0
@@ -35,14 +40,39 @@ class	EnemyHandler
 
 	function	OnSetup(item)
 	{
+		body = item
 		player = SceneFindItem(g_scene, "player")
 
 		ItemPhysicSetLinearFactor(item, Vector(1,0,1))
 		ItemPhysicSetAngularFactor(item, Vector(0,1,0))
 
 		position_dt = Vector(0,0,0)
+		initial_position_dt = Vector(0,0,0)
+
 		velocity = Vector(0,0,0)
 		position = ItemGetPosition(item)
+
+		Spawn(position)
+	}
+
+	function	Spawn(_position)
+	{
+		if (player_script == 0)
+			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
+
+		position = _position
+		ItemSetPosition(body, position)
+		ItemPhysicResetTransformation(body, position, Vector(0,0,0))
+		ItemSetLinearVelocity(body, Vector(0,0,0))
+
+		initial_position_dt = player_script.position - position
+		initial_position_dt.y = 0.0
+		initial_distance_to_player = initial_position_dt.Len()
+
+		if (fabs(initial_position_dt.x) < fabs(initial_position_dt.z))
+			initial_position_dt.x = 0.0
+		else
+			initial_position_dt.z = 0.0
 
 		awaken = true
 	}
@@ -58,6 +88,11 @@ class	EnemyHandler
 		position_dt = player_script.position - position
 		local	current_dist_to_player = position_dt.Len()
 		distance_dt = distance_to_player - current_dist_to_player
+
+		local	_d_min = distance_to_player * 0.9
+		local	_d_max = initial_distance_to_player
+		local	dist_ramp = RangeAdjust(Clamp(current_dist_to_player, _d_min, _d_max), _d_min, _d_max, 0.0, 1.0)
+		position_dt = position_dt.Lerp(1.0 - dist_ramp, initial_position_dt)
 	}
 
 	function	OnPhysicStep(item, dt)
