@@ -11,11 +11,13 @@ Include("scripts/ui.nut")
 */
 class	SceneManager
 {
-	ui			=	0
-	life_bar	=	0
-	game_over	=	0
+	ui					=	0
+	life_bar			=	0
+	game_over			=	0
 
-	dispatch	=	0
+	dispatch			=	0
+
+	player_script		=	0
 
 	function	OnSetup(scene)
 	{
@@ -41,6 +43,9 @@ class	SceneManager
 		game_over.font_size = 256
 		game_over.refresh()
 		SpriteSetOpacity(game_over.window, 0.0)
+
+		if (player_script == 0)
+			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
 	}
 
 	function 	EndGame()
@@ -71,8 +76,19 @@ class	SceneManager
 		dispatch = WaitForGameRestart
 	}
 
+	function	ResetGame(scene)
+	{
+		UISetCommandList(ui, "globalfade 0.1,0.0;")
+		WindowSetCommandList(game_over.window, "toalpha 0,0.25;toalpha 0.1,0.0;")
+		player_script.ResetGame(SceneFindItem(g_scene, "player"))
+		dispatch = 0
+	}
+
 	function	WaitForGameRestart(scene)
 	{
-//		if (false)
+		if (player_script != 0)
+			if (player_script.pad_device != 0)
+				if (DeviceKeyPressed(player_script.pad_device, KeyButton0))
+					dispatch = ResetGame
 	}
 }

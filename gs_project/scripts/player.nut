@@ -99,6 +99,15 @@ class	Player
 		sfx_table = {}
 	}
 
+	function	ResetGame(item)
+	{
+		local	_spawn_pos	=	ItemGetPosition(SceneFindItem(g_scene, "player_spawnpoint"))
+		ItemSetPosition(item, _spawn_pos)
+		ItemPhysicResetTransformation(item, _spawn_pos, Vector(0,0,0))
+		life = 100.0
+		RefreshHud()
+	}
+
 	function	OnUpdate(item)
 	{
 		if (life <= 0.0)
@@ -179,11 +188,16 @@ class	Player
 
 		print("Player::Hit() !!!!")
 		life -= _damage
-		SceneGetScriptInstance(g_scene).SetLifeBar(life.tofloat())
+		RefreshHud()
 		print("Player::Hit() life = " + life.tostring())
 
 		if (life <= 0.0)
 			SceneGetScriptInstance(g_scene).EndGame()
+	}
+
+	function	RefreshHud()
+	{
+		SceneGetScriptInstance(g_scene).SetLifeBar(life.tofloat())
 	}
 
 	function	HearSfxFromLocation(_sound_filename = "", _pos = Vector(0,0,0), far_distance = Mtr(15.0), sound_volume = 1.0)
