@@ -401,8 +401,8 @@
 	>
 	<Entry=
 		<ID="scripts/bullet.nut">
-		<CompLen=1150>
-		<Len=3339>
+		<CompLen=1159>
+		<Len=3381>
 		<Offset=477039>
 		<Method="Zlib">
 	>
@@ -410,1253 +410,1253 @@
 		<ID="scripts/camera.nut">
 		<CompLen=333>
 		<Len=699>
-		<Offset=478220>
+		<Offset=478229>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="scripts/enemy.nut">
-		<CompLen=2151>
-		<Len=7724>
-		<Offset=478583>
+		<CompLen=2161>
+		<Len=7764>
+		<Offset=478592>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="scripts/item_sound_emitter.nut">
 		<CompLen=1111>
 		<Len=3156>
-		<Offset=480777>
+		<Offset=480796>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="scripts/light.nut">
 		<CompLen=338>
 		<Len=697>
-		<Offset=481918>
+		<Offset=481937>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="scripts/player.nut">
 		<CompLen=1772>
-		<Len=5453>
-		<Offset=482287>
+		<Len=5451>
+		<Offset=482306>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="scripts/preloader.nut">
 		<CompLen=776>
 		<Len=2363>
-		<Offset=484093>
+		<Offset=484112>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="scripts/project.nut">
 		<CompLen=456>
 		<Len=992>
-		<Offset=484901>
+		<Offset=484920>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="scripts/scene_manager.nut">
-		<CompLen=821>
-		<Len=2101>
-		<Offset=485395>
+		<CompLen=960>
+		<Len=2477>
+		<Offset=485414>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="scripts/ui.nut">
 		<CompLen=1103>
 		<Len=3011>
-		<Offset=486243>
+		<Offset=486401>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="scripts/utils.nut">
 		<CompLen=5797>
 		<Len=20502>
-		<Offset=487376>
+		<Offset=487534>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="ui/fonts/visitor1.ttf">
 		<CompLen=9438>
 		<Len=27552>
-		<Offset=493207>
+		<Offset=493365>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="ui/loader_back.png">
 		<CompLen=2963>
 		<Len=3065>
-		<Offset=502676>
+		<Offset=502834>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="ui/loader_bar.png">
 		<CompLen=155>
 		<Len=169>
-		<Offset=505669>
+		<Offset=505827>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="ui/loader_bar.png.parm">
 		<CompLen=155>
 		<Len=249>
-		<Offset=505859>
+		<Offset=506017>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/maps/error.png">
 		<CompLen=3814>
 		<Len=4559>
-		<Offset=506049>
+		<Offset=506207>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/maps/flare.png">
 		<CompLen=334139>
 		<Len=336516>
-		<Offset=509898>
+		<Offset=510056>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/maps/missing_material.png">
 		<CompLen=4439>
 		<Len=5143>
-		<Offset=844083>
+		<Offset=844241>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/maps/missing_shader.png">
 		<CompLen=4878>
 		<Len=5545>
-		<Offset=848566>
+		<Offset=848724>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/maps/missing_texture.png">
 		<CompLen=4631>
 		<Len=5295>
-		<Offset=853489>
+		<Offset=853647>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/maps/time_of_day.png">
 		<CompLen=26230>
 		<Len=26608>
-		<Offset=858161>
+		<Offset=858319>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/material/default.nmm">
 		<CompLen=79>
 		<Len=76>
-		<Offset=884432>
+		<Offset=884590>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/material/missing.nmm">
 		<CompLen=82>
 		<Len=85>
-		<Offset=884552>
+		<Offset=884710>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/particle/default.ems">
 		<CompLen=479>
 		<Len=1846>
-		<Offset=884675>
+		<Offset=884833>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/particle/default.tga">
 		<CompLen=8353>
 		<Len=16428>
-		<Offset=885195>
+		<Offset=885353>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/camera_auto_dof.nut">
 		<CompLen=644>
 		<Len=1419>
-		<Offset=893595>
+		<Offset=893753>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/group_merge_items.nut">
 		<CompLen=1301>
 		<Len=3706>
-		<Offset=894288>
+		<Offset=894446>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_ai_behaviour_avoid_wall.nut">
 		<CompLen=1339>
 		<Len=4583>
-		<Offset=895649>
+		<Offset=895807>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_ai_behaviour_follow_target.nut">
 		<CompLen=946>
 		<Len=2715>
-		<Offset=897051>
+		<Offset=897209>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_ai_master.nut">
 		<CompLen=1725>
 		<Len=6495>
-		<Offset=898043>
+		<Offset=898201>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_fps.nut">
 		<CompLen=1165>
 		<Len=3311>
-		<Offset=899808>
+		<Offset=899966>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_label3d.nut">
 		<CompLen=564>
 		<Len=1139>
-		<Offset=901017>
+		<Offset=901175>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_lens_flare.nut">
 		<CompLen=1627>
 		<Len=4886>
-		<Offset=901628>
+		<Offset=901786>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_physicbox.nut">
 		<CompLen=565>
 		<Len=1290>
-		<Offset=903301>
+		<Offset=903459>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_play_motion.nut">
 		<CompLen=474>
 		<Len=1332>
-		<Offset=903914>
+		<Offset=904072>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_raycar.nut">
 		<CompLen=2031>
 		<Len=6814>
-		<Offset=904431>
+		<Offset=904589>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_rotate.nut">
 		<CompLen=358>
 		<Len=678>
-		<Offset=906505>
+		<Offset=906663>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_scatter_geometry.nut">
 		<CompLen=1396>
 		<Len=4224>
-		<Offset=906916>
+		<Offset=907074>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_shake.nut">
 		<CompLen=404>
 		<Len=942>
-		<Offset=908354>
+		<Offset=908512>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_soapbox.nut">
 		<CompLen=1879>
 		<Len=6081>
-		<Offset=908802>
+		<Offset=908960>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_sound_emitter.nut">
 		<CompLen=977>
 		<Len=2577>
-		<Offset=910731>
+		<Offset=910889>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_trail.nut">
 		<CompLen=993>
 		<Len=2899>
-		<Offset=911750>
+		<Offset=911908>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_turret.nut">
 		<CompLen=1489>
 		<Len=7115>
-		<Offset=912786>
+		<Offset=912944>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/item_wanderer.nut">
 		<CompLen=673>
 		<Len=1622>
-		<Offset=914320>
+		<Offset=914478>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/reflection.nut">
 		<CompLen=1477>
 		<Len=4386>
-		<Offset=915035>
+		<Offset=915193>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/scene_camera_slideshow.nut">
 		<CompLen=790>
 		<Len=2074>
-		<Offset=916566>
+		<Offset=916724>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/scene_post_process.nut">
 		<CompLen=417>
 		<Len=940>
-		<Offset=917406>
+		<Offset=917564>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/smart_camera_follow_item.nut">
 		<CompLen=1340>
 		<Len=4244>
-		<Offset=917879>
+		<Offset=918037>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/script/third_person_camera.nut">
 		<CompLen=1198>
 		<Len=3546>
-		<Offset=919270>
+		<Offset=919428>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/shader/missing_material.nsa">
 		<CompLen=330>
 		<Len=527>
-		<Offset=920516>
+		<Offset=920674>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/shader/missing_shader.nsa">
 		<CompLen=328>
 		<Len=525>
-		<Offset=920892>
+		<Offset=921050>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="builtin/shader/simple_texture.nsa">
 		<CompLen=241>
 		<Len=393>
-		<Offset=921266>
+		<Offset=921424>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="default.ttf">
 		<CompLen=95934>
 		<Len=171792>
-		<Offset=921531>
+		<Offset=921689>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="dither.tga">
 		<CompLen=237>
 		<Len=226>
-		<Offset=1017488>
+		<Offset=1017646>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="figures/actor.nmg">
 		<CompLen=489>
 		<Len=1021>
-		<Offset=1017755>
+		<Offset=1017913>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="figures/camera.nmg">
 		<CompLen=995>
 		<Len=2270>
-		<Offset=1018275>
+		<Offset=1018433>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="figures/figure.nmm">
 		<CompLen=91>
 		<Len=176>
-		<Offset=1019301>
+		<Offset=1019459>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="figures/hinge.nmg">
 		<CompLen=601>
 		<Len=1181>
-		<Offset=1019422>
+		<Offset=1019580>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="figures/linearlight.nmg">
 		<CompLen=421>
 		<Len=979>
-		<Offset=1020059>
+		<Offset=1020217>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="figures/pointlight.nmg">
 		<CompLen=471>
 		<Len=1389>
-		<Offset=1020515>
+		<Offset=1020673>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="figures/position_constraint.nmg">
 		<CompLen=396>
 		<Len=956>
-		<Offset=1021030>
+		<Offset=1021188>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="figures/spotlight.nmg">
 		<CompLen=518>
 		<Len=1171>
-		<Offset=1021460>
+		<Offset=1021618>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="figures/trigger.nmg">
 		<CompLen=791>
 		<Len=2656>
-		<Offset=1022010>
+		<Offset=1022168>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="fonts/fps.nml">
 		<CompLen=398>
 		<Len=1916>
-		<Offset=1022827>
+		<Offset=1022985>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="fonts/fps_00.tga">
 		<CompLen=5000>
 		<Len=25614>
-		<Offset=1023254>
+		<Offset=1023412>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="fonts/profiler_base.nml">
 		<CompLen=2528>
 		<Len=29151>
-		<Offset=1028290>
+		<Offset=1028448>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="fonts/profiler_base_00.tga">
 		<CompLen=10497>
 		<Len=262188>
-		<Offset=1030857>
+		<Offset=1031015>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="fonts/profiler_bold.nml">
 		<CompLen=2604>
 		<Len=29162>
-		<Offset=1041390>
+		<Offset=1041548>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="fonts/profiler_bold_00.tga">
 		<CompLen=11883>
 		<Len=262188>
-		<Offset=1044033>
+		<Offset=1044191>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="noise.tga">
 		<CompLen=62396>
 		<Len=65580>
-		<Offset=1055938>
+		<Offset=1056096>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/billboard.nut">
 		<CompLen=419>
 		<Len=1422>
-		<Offset=1118367>
+		<Offset=1118525>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/compat.nut">
 		<CompLen=912>
 		<Len=6372>
-		<Offset=1118816>
+		<Offset=1118974>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/helper.nut">
 		<CompLen=474>
 		<Len=1146>
-		<Offset=1119758>
+		<Offset=1119916>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/io.nut">
 		<CompLen=236>
 		<Len=453>
-		<Offset=1120258>
+		<Offset=1120416>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/math.nut">
 		<CompLen=1744>
 		<Len=7068>
-		<Offset=1120522>
+		<Offset=1120680>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/matrix.nut">
 		<CompLen=321>
 		<Len=873>
-		<Offset=1122296>
+		<Offset=1122454>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/metafile.nut">
 		<CompLen=952>
 		<Len=3192>
-		<Offset=1122649>
+		<Offset=1122807>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/minmax.nut">
 		<CompLen=379>
 		<Len=861>
-		<Offset=1123631>
+		<Offset=1123789>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/nad.nut">
 		<CompLen=290>
 		<Len=951>
-		<Offset=1124037>
+		<Offset=1124195>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/camera.nut">
 		<CompLen=241>
 		<Len=507>
-		<Offset=1124360>
+		<Offset=1124518>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/engine.nut">
 		<CompLen=336>
 		<Len=959>
-		<Offset=1124634>
+		<Offset=1124792>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/geometry.nut">
 		<CompLen=193>
 		<Len=409>
-		<Offset=1125005>
+		<Offset=1125163>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/group.nut">
 		<CompLen=424>
 		<Len=1191>
-		<Offset=1125230>
+		<Offset=1125388>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/item.nut">
 		<CompLen=574>
 		<Len=2024>
-		<Offset=1125685>
+		<Offset=1125843>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/item_derived.nut">
 		<CompLen=106>
 		<Len=160>
-		<Offset=1126298>
+		<Offset=1126456>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/light.nut">
 		<CompLen=16>
 		<Len=8>
-		<Offset=1126436>
+		<Offset=1126594>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/material.nut">
 		<CompLen=303>
 		<Len=839>
-		<Offset=1126487>
+		<Offset=1126645>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/mixer.nut">
 		<CompLen=225>
 		<Len=574>
-		<Offset=1126822>
+		<Offset=1126980>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/motion.nut">
 		<CompLen=183>
 		<Len=374>
-		<Offset=1127080>
+		<Offset=1127238>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/object.nut">
 		<CompLen=159>
 		<Len=276>
-		<Offset=1127296>
+		<Offset=1127454>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/oo.nut">
 		<CompLen=223>
 		<Len=813>
-		<Offset=1127484>
+		<Offset=1127642>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/picture.nut">
 		<CompLen=435>
 		<Len=1194>
-		<Offset=1127741>
+		<Offset=1127899>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/raytracer.nut">
 		<CompLen=320>
 		<Len=814>
-		<Offset=1128212>
+		<Offset=1128370>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/readme.txt">
 		<CompLen=81>
 		<Len=78>
-		<Offset=1128565>
+		<Offset=1128723>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/scene.nut">
 		<CompLen=3586>
 		<Len=12069>
-		<Offset=1128678>
+		<Offset=1128836>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/sound.nut">
 		<CompLen=147>
 		<Len=228>
-		<Offset=1132296>
+		<Offset=1132454>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/texture.nut">
 		<CompLen=233>
 		<Len=510>
-		<Offset=1132477>
+		<Offset=1132635>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/oo/ui.nut">
 		<CompLen=155>
 		<Len=212>
-		<Offset=1132739>
+		<Offset=1132897>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/point.nut">
 		<CompLen=281>
 		<Len=586>
-		<Offset=1132923>
+		<Offset=1133081>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/project.nut">
 		<CompLen=211>
 		<Len=288>
-		<Offset=1133235>
+		<Offset=1133393>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/rand.nut">
 		<CompLen=333>
 		<Len=757>
-		<Offset=1133474>
+		<Offset=1133632>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/rect.nut">
 		<CompLen=1182>
 		<Len=3824>
-		<Offset=1133835>
+		<Offset=1133993>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/render/manual_draw_buffer.nut">
 		<CompLen=346>
 		<Len=798>
-		<Offset=1135066>
+		<Offset=1135224>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/timeout_handler.nut">
 		<CompLen=527>
 		<Len=1342>
-		<Offset=1135451>
+		<Offset=1135609>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/ui.nut">
 		<CompLen=497>
 		<Len=1033>
-		<Offset=1136004>
+		<Offset=1136162>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/vector.nut">
 		<CompLen=286>
 		<Len=569>
-		<Offset=1136531>
+		<Offset=1136689>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="script/vector2.nut">
 		<CompLen=1409>
 		<Len=5310>
-		<Offset=1136848>
+		<Offset=1137006>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/ambient.nsa">
 		<CompLen=207>
 		<Len=418>
-		<Offset=1138293>
+		<Offset=1138451>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/ambient_f.txt">
 		<CompLen=147>
 		<Len=196>
-		<Offset=1138538>
+		<Offset=1138696>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/chromatic_dispersion.nsa">
 		<CompLen=249>
 		<Len=438>
-		<Offset=1138734>
+		<Offset=1138892>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/chromatic_dispersion_f.txt">
 		<CompLen=177>
 		<Len=393>
-		<Offset=1139034>
+		<Offset=1139192>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/ds_fog.nsa">
 		<CompLen=235>
 		<Len=489>
-		<Offset=1139255>
+		<Offset=1139413>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/ds_fog_f.txt">
 		<CompLen=169>
 		<Len=216>
-		<Offset=1139536>
+		<Offset=1139694>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/linearlight.nsa">
 		<CompLen=294>
 		<Len=726>
-		<Offset=1139754>
+		<Offset=1139912>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/linearlight_f.txt">
 		<CompLen=408>
 		<Len=812>
-		<Offset=1140099>
+		<Offset=1140257>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/linearlight_shadow.nsa">
 		<CompLen=456>
 		<Len=1761>
-		<Offset=1140563>
+		<Offset=1140721>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/linearlight_shadow_f.txt">
 		<CompLen=548>
 		<Len=1156>
-		<Offset=1141077>
+		<Offset=1141235>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/linearlight_shadow_v.txt">
 		<CompLen=57>
 		<Len=65>
-		<Offset=1141683>
+		<Offset=1141841>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/linearlight_v.txt">
 		<CompLen=58>
 		<Len=66>
-		<Offset=1141791>
+		<Offset=1141949>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/pointlight.nsa">
 		<CompLen=343>
 		<Len=926>
-		<Offset=1141897>
+		<Offset=1142055>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/pointlight_f.txt">
 		<CompLen=476>
 		<Len=969>
-		<Offset=1142290>
+		<Offset=1142448>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/pointlight_shadow.nsa">
 		<CompLen=455>
 		<Len=1743>
-		<Offset=1142821>
+		<Offset=1142979>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/pointlight_shadow_f.txt">
 		<CompLen=772>
 		<Len=2300>
-		<Offset=1143333>
+		<Offset=1143491>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/pointlight_shadow_v.txt">
 		<CompLen=77>
 		<Len=112>
-		<Offset=1144162>
+		<Offset=1144320>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/pointlight_v.txt">
 		<CompLen=77>
 		<Len=112>
-		<Offset=1144289>
+		<Offset=1144447>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/spotlight.nsa">
 		<CompLen=369>
 		<Len=1095>
-		<Offset=1144413>
+		<Offset=1144571>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/spotlight_f.txt">
 		<CompLen=529>
 		<Len=1108>
-		<Offset=1144831>
+		<Offset=1144989>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/spotlight_shadow.nsa">
 		<CompLen=427>
 		<Len=1454>
-		<Offset=1145414>
+		<Offset=1145572>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/spotlight_shadow_f.txt">
 		<CompLen=582>
 		<Len=1234>
-		<Offset=1145897>
+		<Offset=1146055>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/spotlight_shadow_v.txt">
 		<CompLen=77>
 		<Len=112>
-		<Offset=1146535>
+		<Offset=1146693>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/deferred/spotlight_v.txt">
 		<CompLen=77>
 		<Len=112>
-		<Offset=1146661>
+		<Offset=1146819>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/dict.txt">
 		<CompLen=1284>
 		<Len=8421>
-		<Offset=1146771>
+		<Offset=1146929>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/dict_material.txt">
 		<CompLen=2025>
 		<Len=10661>
-		<Offset=1148097>
+		<Offset=1148255>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/fx_blur.nsa">
 		<CompLen=247>
 		<Len=511>
-		<Offset=1150158>
+		<Offset=1150316>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/fx_blur_f.txt">
 		<CompLen=266>
 		<Len=457>
-		<Offset=1150443>
+		<Offset=1150601>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/hsl.nsa">
 		<CompLen=212>
 		<Len=432>
-		<Offset=1150741>
+		<Offset=1150899>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/hsl_f.txt">
 		<CompLen=659>
 		<Len=1718>
-		<Offset=1150987>
+		<Offset=1151145>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/motion_blur.nsa">
 		<CompLen=299>
 		<Len=690>
-		<Offset=1151686>
+		<Offset=1151844>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/motion_blur_f.txt">
 		<CompLen=550>
 		<Len=1403>
-		<Offset=1152027>
+		<Offset=1152185>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/noise.nsa">
 		<CompLen=272>
 		<Len=607>
-		<Offset=1152611>
+		<Offset=1152769>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/noise_f.txt">
 		<CompLen=534>
 		<Len=1244>
-		<Offset=1152919>
+		<Offset=1153077>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/position_no_transform_v.txt">
 		<CompLen=41>
 		<Len=39>
-		<Offset=1153505>
+		<Offset=1153663>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/position_v.txt">
 		<CompLen=117>
 		<Len=129>
-		<Offset=1153585>
+		<Offset=1153743>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/radial_blur.nsa">
 		<CompLen=309>
 		<Len=683>
-		<Offset=1153742>
+		<Offset=1153900>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/radial_blur_f.txt">
 		<CompLen=239>
 		<Len=352>
-		<Offset=1154093>
+		<Offset=1154251>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/sharpen.nsa">
 		<CompLen=211>
 		<Len=361>
-		<Offset=1154368>
+		<Offset=1154526>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/sharpen_f.txt">
 		<CompLen=189>
 		<Len=671>
-		<Offset=1154617>
+		<Offset=1154775>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/simple.nsa">
 		<CompLen=178>
 		<Len=264>
-		<Offset=1154841>
+		<Offset=1154999>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/simple_f.txt">
 		<CompLen=35>
 		<Len=39>
-		<Offset=1155056>
+		<Offset=1155214>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/simple_v.txt">
 		<CompLen=59>
 		<Len=57>
-		<Offset=1155128>
+		<Offset=1155286>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_color.nsa">
 		<CompLen=223>
 		<Len=392>
-		<Offset=1155228>
+		<Offset=1155386>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_color_f.txt">
 		<CompLen=28>
 		<Len=24>
-		<Offset=1155494>
+		<Offset=1155652>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_color_v.txt">
 		<CompLen=74>
 		<Len=79>
-		<Offset=1155565>
+		<Offset=1155723>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_texture.nsa">
 		<CompLen=235>
 		<Len=436>
-		<Offset=1155682>
+		<Offset=1155840>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_texture_color.nsa">
 		<CompLen=268>
 		<Len=565>
-		<Offset=1155966>
+		<Offset=1156124>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_texture_color_f.txt">
 		<CompLen=64>
 		<Len=66>
-		<Offset=1156285>
+		<Offset=1156443>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_texture_color_v.txt">
 		<CompLen=84>
 		<Len=93>
-		<Offset=1156400>
+		<Offset=1156558>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_texture_cutoff.nsa">
 		<CompLen=257>
 		<Len=492>
-		<Offset=1156534>
+		<Offset=1156692>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_texture_cutoff_f.txt">
 		<CompLen=93>
 		<Len=92>
-		<Offset=1156843>
+		<Offset=1157001>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_texture_f.txt">
 		<CompLen=45>
 		<Len=39>
-		<Offset=1156981>
+		<Offset=1157139>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_texture_fx.nsa">
 		<CompLen=251>
 		<Len=492>
-		<Offset=1157072>
+		<Offset=1157230>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_texture_fx_f.txt">
 		<CompLen=56>
 		<Len=50>
-		<Offset=1157371>
+		<Offset=1157529>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/single_texture_v.txt">
 		<CompLen=70>
 		<Len=71>
-		<Offset=1157472>
+		<Offset=1157630>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/skybox.nsa">
 		<CompLen=383>
 		<Len=818>
-		<Offset=1157577>
+		<Offset=1157735>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/ssaa.nsa">
 		<CompLen=187>
 		<Len=307>
-		<Offset=1157993>
+		<Offset=1158151>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/ssaa_f.txt">
 		<CompLen=351>
 		<Len=866>
-		<Offset=1158215>
+		<Offset=1158373>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/ssao.nsa">
 		<CompLen=303>
 		<Len=764>
-		<Offset=1158599>
+		<Offset=1158757>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/ssao_blur.nsa">
 		<CompLen=271>
 		<Len=638>
-		<Offset=1158940>
+		<Offset=1159098>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/ssao_blur_f.txt">
 		<CompLen=370>
 		<Len=734>
-		<Offset=1159251>
+		<Offset=1159409>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/ssao_f.txt">
 		<CompLen=721>
 		<Len=1681>
-		<Offset=1159656>
+		<Offset=1159814>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/tone_mapping.nsa">
 		<CompLen=257>
 		<Len=481>
-		<Offset=1160418>
+		<Offset=1160576>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="shaders/gpu/tone_mapping_f.txt">
 		<CompLen=85>
 		<Len=84>
-		<Offset=1160718>
+		<Offset=1160876>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="ui/default/b.tga">
 		<CompLen=127>
 		<Len=149>
-		<Offset=1160832>
+		<Offset=1160990>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="ui/default/bl.tga">
 		<CompLen=639>
 		<Len=1409>
-		<Offset=1160989>
+		<Offset=1161147>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="ui/default/br.tga">
 		<CompLen=646>
 		<Len=1450>
-		<Offset=1161658>
+		<Offset=1161816>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="ui/default/l.tga">
 		<CompLen=78>
 		<Len=87>
-		<Offset=1162333>
+		<Offset=1162491>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="ui/default/r.tga">
 		<CompLen=81>
 		<Len=91>
-		<Offset=1162440>
+		<Offset=1162598>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="ui/default/t.tga">
 		<CompLen=168>
 		<Len=228>
-		<Offset=1162550>
+		<Offset=1162708>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="ui/default/tl.tga">
 		<CompLen=790>
 		<Len=4460>
-		<Offset=1162748>
+		<Offset=1162906>
 		<Method="Zlib">
 	>
 	<Entry=
 		<ID="ui/default/tr.tga">
 		<CompLen=763>
 		<Len=4644>
-		<Offset=1163568>
+		<Offset=1163726>
 		<Method="Zlib">
 	>
 >
