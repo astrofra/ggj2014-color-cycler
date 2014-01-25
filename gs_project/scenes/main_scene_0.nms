@@ -580,6 +580,10 @@
 								<Id="inertia">
 								<Value=0.100000>
 							>
+							<Parm=
+								<Id="color_switch_timeout">
+								<Value=1.000000>
+							>
 						>
 					>
 				>
@@ -1388,6 +1392,10 @@
 								<Id="bullet_lifetime">
 								<Value=5.000000>
 							>
+							<Parm=
+								<Id="life">
+								<Value=10.000000>
+							>
 						>
 					>
 				>
@@ -1506,6 +1514,10 @@
 							<Parm=
 								<Id="bullet_lifetime">
 								<Value=5.000000>
+							>
+							<Parm=
+								<Id="life">
+								<Value=10.000000>
 							>
 						>
 					>
@@ -1626,6 +1638,10 @@
 								<Id="bullet_lifetime">
 								<Value=5.000000>
 							>
+							<Parm=
+								<Id="life">
+								<Value=10.000000>
+							>
 						>
 					>
 				>
@@ -1675,6 +1691,7 @@
 						<Y=1.000000>
 						<Z=540.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
