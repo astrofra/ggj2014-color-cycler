@@ -8,14 +8,23 @@ Include("scripts/bullet.nut")
 
 /*
 
-Colmask : 
+Colmask :
 
-PLAYER 110 = 6
-BULLET 101 = 5
-ENEMY  011 = 3
-WALLS  100 = 4
+with mask
+			WEEPP
+			ABNBL
+PLAYER		11100	28
+PBULLET		10100	20
+ENEMY		00011	3
+EBULLET		00001	1
+WALLS		00011	3	
 
-
+group mask
+PLAYER		00001	1
+PBULLET		00010	2
+ENEMY		00100	4
+EBULLET		01000	8
+WALLS		10000	16
 */
 
 /*!
@@ -61,6 +70,8 @@ class	Player
 
 	life				=	100.0
 
+	bullet_item_name	=	"original_bullet_player"
+
 	function	OnSetup(item)
 	{
 		ItemPhysicSetLinearFactor(item, Vector(1,0,1))
@@ -82,7 +93,7 @@ class	Player
 
 		direction_item = ItemGetChild(item, "player_direction")
 
-		cannon = CannonHandler()
+		cannon = CannonHandler(bullet_item_name)
 		cannon.bullet_speed = bullet_speed
  		cannon.bullet_frequency	= bullet_frequency
 		sfx_table = {}

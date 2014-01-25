@@ -223,8 +223,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=16>
+					<Mask=3>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -295,8 +295,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=16>
+					<Mask=3>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -367,8 +367,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=16>
+					<Mask=3>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -444,8 +444,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=16>
+					<Mask=3>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -521,8 +521,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=1>
-					<Mask=1>
+					<SelfMask=18>
+					<Mask=18>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -593,8 +593,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -665,8 +665,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -737,8 +737,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -809,8 +809,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -881,8 +881,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -953,8 +953,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -1025,8 +1025,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -1097,8 +1097,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -1169,8 +1169,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -1241,8 +1241,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -1313,8 +1313,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -1385,8 +1385,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -1457,8 +1457,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -1529,8 +1529,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -1625,8 +1625,8 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=6>
-					<Mask=6>
+					<SelfMask=1>
+					<Mask=28>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -2373,79 +2373,6 @@
 		>
 		<MObject=
 			<MItem=
-				<Id="original_bullet">
-				<UId=34>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<ScriptedObject=
-					<ScriptUnit=
-						<ScriptPath="scripts/bullet.nut">
-						<Class="BulletHandler">
-					>
-				>
-				<PhysicItem=
-					<SelfMask=5>
-					<Mask=5>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.500000>
-								<Y=1.500000>
-								<Z=1.500000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=5000.000000>
-						<Y=1.000000>
-						<Z=5000.000000>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/bullet.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
 				<Id="enemy_generator">
 				<UId=35>
 				<Active>
@@ -2570,8 +2497,8 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=1>
-					<Mask=1>
+					<SelfMask=4>
+					<Mask=3>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -2615,7 +2542,6 @@
 						<Y=1.000000>
 						<Z=500.000000>
 					>
-					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -2670,12 +2596,24 @@
 								<Id="hit_damage">
 								<Value=1.000000>
 							>
+							<Parm=
+								<Id="shooting_range">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="bullet_speed">
+								<Value=0.500000>
+							>
+							<Parm=
+								<Id="bullet_frequency">
+								<Value=5.000000>
+							>
 						>
 					>
 				>
 				<PhysicItem=
-					<SelfMask=1>
-					<Mask=1>
+					<SelfMask=4>
+					<Mask=3>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -2789,8 +2727,8 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=1>
-					<Mask=1>
+					<SelfMask=4>
+					<Mask=3>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -2843,6 +2781,152 @@
 					<Registry>
 				>
 				<Geometry="assets/enemy.nmg">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="original_bullet_enemy">
+				<UId=39>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/bullet.nut">
+						<Class="BulletHandler">
+					>
+				>
+				<PhysicItem=
+					<SelfMask=8>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="Dynamic">
+					<Shapes=
+						<PhysicShape=
+							<Type="Box">
+							<Position=
+								<X=0.000000>
+								<Y=0.000000>
+								<Z=0.000000>
+							>
+							<Rotation=
+								<X=0.000000>
+								<Y=0.000000>
+								<Z=0.000000>
+							>
+							<Scale=
+								<X=1.000000>
+								<Y=1.000000>
+								<Z=1.000000>
+							>
+							<Dimensions=
+								<X=0.650000>
+								<Y=1.500000>
+								<Z=0.650000>
+							>
+							<StaticFriction=0.500000>
+							<DynamicFriction=0.500000>
+							<Restitution=0.500000>
+						>
+					>
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=5000.000000>
+						<Y=1.000000>
+						<Z=-5000.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="assets/bullet.nmg">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="original_bullet_player">
+				<UId=40>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/bullet.nut">
+						<Class="BulletHandler">
+					>
+				>
+				<PhysicItem=
+					<SelfMask=2>
+					<Mask=20>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="Dynamic">
+					<Shapes=
+						<PhysicShape=
+							<Type="Box">
+							<Position=
+								<X=0.000000>
+								<Y=0.000000>
+								<Z=0.000000>
+							>
+							<Rotation=
+								<X=0.000000>
+								<Y=0.000000>
+								<Z=0.000000>
+							>
+							<Scale=
+								<X=1.000000>
+								<Y=1.000000>
+								<Z=1.000000>
+							>
+							<Dimensions=
+								<X=0.650000>
+								<Y=1.500000>
+								<Z=0.650000>
+							>
+							<StaticFriction=0.500000>
+							<DynamicFriction=0.500000>
+							<Restitution=0.500000>
+						>
+					>
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=5000.000000>
+						<Y=1.000000>
+						<Z=5000.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="assets/bullet_player.nmg">
 				<CacheGeometry=True>
 			>
 		>

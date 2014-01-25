@@ -58,6 +58,8 @@ class	EnemyHandler
 	bullet_speed		=	0.5
 	bullet_frequency	=	5.0
 
+	bullet_item_name	=	"original_bullet_enemy"
+
 	function	OnSetup(item)
 	{
 		body = item
@@ -74,7 +76,7 @@ class	EnemyHandler
 		velocity = Vector(0,0,0)
 		position = ItemGetPosition(item)
 
-		cannon = CannonHandler()
+		cannon = CannonHandler(bullet_item_name)
 		cannon.bullet_speed = bullet_speed
  		cannon.bullet_frequency	= bullet_frequency
 
