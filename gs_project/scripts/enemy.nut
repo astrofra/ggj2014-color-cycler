@@ -101,6 +101,9 @@ class	EnemyHandler
 			item = body
 		}
 
+		if (with_item != null && ItemGetName(with_item) != null && ItemGetName(with_item).tolower().find("enemy") != null)
+			return
+
 		if (ItemGetScriptInstanceCount(with_item) > 0)
 		{
 			local	_with_item_script = ItemGetScriptInstance(with_item)
