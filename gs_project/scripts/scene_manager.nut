@@ -52,11 +52,15 @@ class	SceneManager
 
 	function	OnSetupDone(scene)
 	{
-		EndGame()
+		dispatch = GoToStandBy
 	}
 
 	function 	EndGame()
 	{
+		local	_chan = MixerStartStream(g_mixer, "audio/M_Iddleloose.ogg")
+		MixerChannelSetGain(g_mixer, _chan, 1.0)
+		MixerChannelSetPitch(g_mixer, _chan, 1.0)
+		MixerChannelSetLoopMode(g_mixer, _chan, LoopNone)
 		dispatch = GoToStandBy
 	}
 
