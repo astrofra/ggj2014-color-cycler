@@ -16,6 +16,8 @@ class	EnemyHandler
 		<max_speed = <Name = "Max speed (mtrs)"> <Type = "Float"> <Default = 5.0>>
 		<strength = <Name = "Force strength"> <Type = "Float"> <Default = 10.0>>
 		<inertia = <Name = "Force inertia"> <Type = "Float"> <Default = 0.25>>
+		<collision_damage = <Name = "Collision damage"> <Type = "Float"> <Default = 0.25>>
+		<hit_damage = <Name = "Bullet hit damage"> <Type = "Float"> <Default = 1.0>>
 	>
 >*/
 	player				=	0
@@ -42,6 +44,9 @@ class	EnemyHandler
 	inertia				=	0.25
 	max_speed			=	5.0
 
+	collision_damage	=	0.25
+	hit_damage			=	1.0
+
 	function	OnSetup(item)
 	{
 		body = item
@@ -58,6 +63,28 @@ class	EnemyHandler
 		position = ItemGetPosition(item)
 
 		//	Spawn(position)
+	}
+
+	function	OnCollision(item, with_item)
+	{
+		print("BulletHandler::OnCollision() with_item = " + ItemGetName(with_item))
+
+		if (player_script == 0)
+			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
+
+		//	This should not happen, just in case...
+		if (ObjectIsSame(with_item, body))
+		{
+			with_item = item
+			item = body
+		}
+
+		if (ItemGetScriptInstanceCount(with_item) > 0)
+		{
+			local	_with_item_script = ItemGetScriptInstance(with_item)
+			if ("Hit" in _with_item_script)
+				_with_item_script.Hit(collision_damage)
+		}
 	}
 
 	function	Spawn(_position)

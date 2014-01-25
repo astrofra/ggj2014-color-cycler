@@ -59,6 +59,8 @@ class	Player
 
 	sfx_table			=	0
 
+	life				=	100.0
+
 	function	OnSetup(item)
 	{
 		ItemPhysicSetLinearFactor(item, Vector(1,0,1))
@@ -156,9 +158,11 @@ class	Player
 		
 	}
 
-	function	Hit()
+	function	Hit(_damage = 1.0)
 	{
 		print("Player::Hit() !!!!")
+		life -= _damage
+		print("Player::Hit() life = " + life.tostring())
 	}
 
 	function	HearSfxFromLocation(_sound_filename = "", _pos = Vector(0,0,0), far_distance = Mtr(15.0), sound_volume = 1.0)

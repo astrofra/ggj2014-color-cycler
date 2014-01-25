@@ -14,6 +14,8 @@ class	BulletHandler
 	velocity		=	0
 	dispatch		=	0
 
+	hit_damage		=	1.0
+
 	function	OnSetup(item)
 	{
 		body = item
@@ -51,7 +53,7 @@ class	BulletHandler
 		{
 			local	_with_item_script = ItemGetScriptInstance(with_item)
 			if ("Hit" in _with_item_script)
-				_with_item_script.Hit()
+				_with_item_script.Hit(hit_damage)
 		}
 
 		dispatch = EmitHitSound
