@@ -14,7 +14,8 @@ class	Player
 {
 /*<
 	<Parameter =
-		<strength = <Name = "Player speed"> <Type = "Float"> <Default = 100.0>>
+		<strength = <Name = "Motion strength"> <Type = "Float"> <Default = 100.0>>
+		<inertia = <Name = "Motion inertia [0.0, 1.0]"> <Type = "Float"> <Default = 0.25>>
 		<bullet_speed = <Name = "Bullet speed"> <Type = "Float"> <Default = 1.0>>
 		<bullet_frequency = <Name = "Bullet frequency (Hz)"> <Type = "Float"> <Default = 15.0>>
 	>
@@ -34,6 +35,7 @@ class	Player
 
 	item_matrix			=	0
 
+	inertia				=	0.25
 	strength			=	100.0
 	angular_strength	=	5.0
 
@@ -107,7 +109,8 @@ class	Player
 
 		ItemSetRotation(direction_item, Vector(0, angle, 0))
 		cannon.Update(ItemGetPosition(item), direction)
-		cannon.Shoot()
+		if (pad_heading.Len() > 0.1)
+			cannon.Shoot()
 
 	//	DumpVector(pad_vector, "pad_vector")
 	//	DumpVector(pad_heading, "pad_heading")
@@ -123,7 +126,7 @@ class	Player
 		angular_velocity = ItemGetAngularVelocity(item)
 		item_matrix = ItemGetMatrix(item)
 
-		_force = pad_vector - velocity.Scale(0.25)
+		_force = pad_vector - velocity.Scale(Clamp(inertia, 0.0, 1.0))
 		_force = _force.Scale(strength)
 
 //		_angular_force = pad_heading.x - angular_velocity.y * 0.25
