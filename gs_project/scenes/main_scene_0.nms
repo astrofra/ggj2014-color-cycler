@@ -223,8 +223,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=3>
-					<Mask=3>
+					<SelfMask=4>
+					<Mask=4>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -295,8 +295,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=3>
-					<Mask=3>
+					<SelfMask=4>
+					<Mask=4>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -367,8 +367,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=3>
-					<Mask=3>
+					<SelfMask=4>
+					<Mask=4>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -444,8 +444,8 @@
 					<Motions>
 				>
 				<PhysicItem=
-					<SelfMask=3>
-					<Mask=3>
+					<SelfMask=4>
+					<Mask=4>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -1625,8 +1625,8 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=2>
-					<Mask=2>
+					<SelfMask=6>
+					<Mask=6>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -2387,8 +2387,8 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=1>
-					<Mask=1>
+					<SelfMask=5>
+					<Mask=5>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
@@ -2464,11 +2464,15 @@
 							>
 							<Parm=
 								<Id="strength">
-								<Value=10.000000>
+								<Value=20.000000>
 							>
 							<Parm=
 								<Id="inertia">
 								<Value=0.250000>
+							>
+							<Parm=
+								<Id="max_speed">
+								<Value=10.000000>
 							>
 						>
 					>
@@ -2515,9 +2519,9 @@
 			<Object=
 				<Item=
 					<Position=
-						<X=-18.052393>
-						<Y=1.000000>
-						<Z=18.341824>
+						<X=-41.526997>
+						<Y=1.000004>
+						<Z=30.421381>
 					>
 					<ItemFlag>
 					<Target=

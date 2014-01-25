@@ -12,6 +12,7 @@ class	EnemyHandler
 /*<
 	<Parameter =
 		<distance_to_player = <Name = "Distance to player (m)"> <Type = "Float"> <Default = 5.0>>
+		<max_speed = <Name = "Max speed (mtrs)"> <Type = "Float"> <Default = 5.0>>
 		<strength = <Name = "Force strength"> <Type = "Float"> <Default = 10.0>>
 		<inertia = <Name = "Force inertia"> <Type = "Float"> <Default = 0.25>>
 	>
@@ -19,6 +20,7 @@ class	EnemyHandler
 	player				=	0
 	player_script		=	0
 	dispatch			=	0
+	awaken				=	false
 	dying				=	false
 
 	position			=	0
@@ -41,6 +43,8 @@ class	EnemyHandler
 		position_dt = Vector(0,0,0)
 		velocity = Vector(0,0,0)
 		position = ItemGetPosition(item)
+
+		awaken = true
 	}
 
 	function	OnUpdate(item)
@@ -61,14 +65,26 @@ class	EnemyHandler
 		position = ItemGetPosition(item)
 		velocity = ItemGetLinearVelocity(item)
 
-		local	_force = (position_dt.Normalize().Scale(-distance_dt) - velocity.Scale(inertia))
+		if (awaken)
+		{
+			ItemSetLinearDamping(item, 1.0)
+			ItemSetAngularDamping(item, 1.0)
 
-		if (velocity.Len() > max_speed)
-			_force -= velocity.Normalize().Scale(velocity.Len() - max_speed)
+			local	_force = Vector(0,0,0)
+			_force += (position_dt.Normalize().Scale(-distance_dt) - velocity.Scale(inertia))
 
-		_force = _force.Scale(strength)
+			if (velocity.Len() > max_speed)
+				_force -= velocity.Normalize().Scale(velocity.Len() - max_speed)
 
-		ItemApplyLinearForce(item, _force)
+			_force = _force.Scale(strength)
+
+			ItemApplyLinearForce(item, _force)
+		}
+		else
+		{
+			ItemSetLinearDamping(item, 0.2)
+			ItemSetAngularDamping(item, 0.2)
+		}
 	}
 
 	function	Hit()
@@ -102,4 +118,9 @@ class	EnemyHandler
 		dispatch = 0
 		SceneDeleteItem(g_scene, item)
 	}
+}
+
+class	EnemyGenerator
+{
+	
 }

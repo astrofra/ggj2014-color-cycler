@@ -10,10 +10,10 @@ Include("scripts/bullet.nut")
 
 Colmask : 
 
-PLAYER 10 = 2
-BULLET 01 = 1
-ENEMY  11 = 3
-WALLS  11 = 3
+PLAYER 110 = 6
+BULLET 101 = 5
+ENEMY  011 = 3
+WALLS  100 = 4
 
 
 */
@@ -64,7 +64,7 @@ class	Player
 		ItemPhysicSetLinearFactor(item, Vector(1,0,1))
 		ItemPhysicSetAngularFactor(item, Vector(0,1,0))
 
-		ItemSetLinearDamping(item, 0.1)
+		ItemSetLinearDamping(item, 0.9)
 		ItemSetAngularDamping(item, 0.5)
 
 		position = ItemGetPosition(item)
