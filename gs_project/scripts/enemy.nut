@@ -12,6 +12,7 @@ class	EnemyHandler
 /*<
 	<Parameter =
 		<distance_to_player = <Name = "Distance to player (m)"> <Type = "Float"> <Default = 5.0>>
+		<distance_rand = <Name = "Distance randomize (m)"> <Type = "Float"> <Default = 1.0>>
 		<max_speed = <Name = "Max speed (mtrs)"> <Type = "Float"> <Default = 5.0>>
 		<strength = <Name = "Force strength"> <Type = "Float"> <Default = 10.0>>
 		<inertia = <Name = "Force inertia"> <Type = "Float"> <Default = 0.25>>
@@ -32,6 +33,7 @@ class	EnemyHandler
 
 	initial_position_dt	=	0
 	initial_distance_to_player	=	0
+	distance_rand		=	1.0
 
 	current_dist_to_player	=	0
 	distance_to_player	=	Mtr(5.0)
@@ -67,6 +69,8 @@ class	EnemyHandler
 		ItemSetPosition(body, position)
 		ItemPhysicResetTransformation(body, position, Vector(0,0,0))
 		ItemSetLinearVelocity(body, Vector(0,0,0))
+
+		distance_to_player += Rand(-0.5, 0.5) * distance_rand
 
 		initial_position_dt = player_script.position - position
 		initial_position_dt.y = 0.0
@@ -119,7 +123,7 @@ class	EnemyHandler
 				_force -= velocity.Normalize().Scale(velocity.Len() - max_speed)
 
 			local	side_ramp = RangeAdjust(Clamp(current_dist_to_player, distance_to_player * 0.5, distance_to_player * 1.5), distance_to_player * 0.5, distance_to_player * 1.5, 0.0, 1.0)
-			_force += sideway_vector.Scale(side_ramp * strength * 0.5)
+			_force += sideway_vector.Scale(side_ramp * strength * 0.25)
 
 			_force = _force.Scale(strength)
 
@@ -171,6 +175,8 @@ class	EnemyGenerator
 	<Parameter =
 		<spawn_frequency = <Name = "Spawn frequency (Hz)"> <Type = "Float"> <Default = 15.0>>
 		<enemy_name = <Name = "Enenmy item name"> <Type = "String"> <Default = "original_enemy_0">>
+		<wave_size = <Name = "Amount of enemies"> <Type = "Float"> <Default = 15.0>>
+		<generator_enabled = <Name = "Enable"> <Type = "Bool"> <Default = True>>
 	>
 >*/
 
@@ -185,6 +191,10 @@ class	EnemyGenerator
 
 	position				=	0
 
+	wave_size				=	15
+	spawn_count				=	0
+	generator_enabled		=	true
+
 	function	OnSetup(item)
 	{
 		if (player_script == 0)
@@ -198,18 +208,22 @@ class	EnemyGenerator
 
 		if (spawn_frequency <= 0.0)
 			spawn_frequency = 1.0
+
+		wave_size = wave_size.tointeger()
+		spawn_count = wave_size
 	}
 
 	function	OnUpdate(item)
 	{
-		Spawn()
+		if (generator_enabled)
+			Spawn()
 	}
 
 	function	Spawn()
 	{
 		local	_spawn_time_interval = 1.0 / spawn_frequency
 
-		if (original_enemy != 0 && g_clock - spawn_timeout > SecToTick(_spawn_time_interval))
+		if (original_enemy != 0 && spawn_count > 0 && g_clock - spawn_timeout > SecToTick(_spawn_time_interval))
 		{
 			local	_new_enemy = SceneDuplicateItem(g_scene, original_enemy)
 			ItemRenderSetup(_new_enemy, g_factory)
@@ -218,6 +232,7 @@ class	EnemyGenerator
 			ItemGetScriptInstance(_new_enemy).Spawn(position)
 
 			spawn_timeout = g_clock
+			spawn_count--
 		}
 	}
 }
