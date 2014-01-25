@@ -6,7 +6,7 @@ class	ProjectHandler
 	reload					=	false
 	scene_filename			=	"scenes/preloader.nms"
 	scene					=	0
-	level					=	0
+	level					=	2
 
 	function	OnSetup(project)
 	{

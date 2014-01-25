@@ -68,6 +68,11 @@ class	SceneManager
 
 	function	StandBy(scene)
 	{
-		dispatch = 0
+		dispatch = WaitForGameRestart
+	}
+
+	function	WaitForGameRestart(scene)
+	{
+//		if (false)
 	}
 }
