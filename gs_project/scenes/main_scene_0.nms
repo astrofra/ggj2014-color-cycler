@@ -29,7 +29,6 @@
 						<Y=1.000000>
 						<Z=10.000000>
 					>
-					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -2458,6 +2457,20 @@
 					<ScriptUnit=
 						<ScriptPath="scripts/enemy.nut">
 						<Class="EnemyHandler">
+						<ParmList=
+							<Parm=
+								<Id="distance_to_player">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="strength">
+								<Value=10.000000>
+							>
+							<Parm=
+								<Id="inertia">
+								<Value=0.250000>
+							>
+						>
 					>
 				>
 				<PhysicItem=
@@ -2502,10 +2515,11 @@
 			<Object=
 				<Item=
 					<Position=
-						<X=-8.173429>
+						<X=-18.052393>
 						<Y=1.000000>
-						<Z=-2.606487>
+						<Z=18.341824>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>

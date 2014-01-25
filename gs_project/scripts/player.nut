@@ -67,6 +67,7 @@ class	Player
 		ItemSetLinearDamping(item, 0.1)
 		ItemSetAngularDamping(item, 0.5)
 
+		position = ItemGetPosition(item)
 		pad_vector = Vector(0,0,0)
 		pad_heading = Vector(0,0,0)
 		velocity = Vector(0,0,0)
