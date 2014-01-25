@@ -81,7 +81,17 @@ class	SceneManager
 		UISetCommandList(ui, "globalfade 0.1,0.0;")
 		WindowSetCommandList(game_over.window, "toalpha 0,0.25;toalpha 0.1,0.0;")
 		player_script.ResetGame(SceneFindItem(g_scene, "player"))
+		WipeAllEnemies(scene)
 		dispatch = 0
+	}
+
+	function	WipeAllEnemies(scene)
+	{
+		foreach(_item in SceneGetItemList(scene))
+			if (_item != null && ObjectIsValid(_item) && ItemGetName(_item) != null && (ItemGetName(_item) == "new_enemy" || ItemGetName(_item) == "new_bullet"))
+				SceneDeleteItem(scene, _item)
+
+		SceneFlushDeletionQueue(scene)
 	}
 
 	function	WaitForGameRestart(scene)

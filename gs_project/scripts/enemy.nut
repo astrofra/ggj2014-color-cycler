@@ -291,6 +291,7 @@ class	EnemyGenerator
 			local	_new_enemy = SceneDuplicateItem(g_scene, original_enemy)
 			ItemRenderSetup(_new_enemy, g_factory)
 			SceneSetupItem(g_scene, _new_enemy)
+			ItemSetName(_new_enemy, "new_enemy")
 
 			ItemGetScriptInstance(_new_enemy).Spawn(position)
 
