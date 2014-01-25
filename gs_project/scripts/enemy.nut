@@ -159,7 +159,7 @@ class	EnemyHandler
 
 		cannon.Update(ItemGetPosition(item), (player_script.position - position).Normalize())
 
-		if (current_dist_to_player < shooting_range)
+		if (current_dist_to_player < shooting_range && player_script.life > 0.0)
 			cannon.Shoot()
 	}
 
@@ -275,7 +275,10 @@ class	EnemyGenerator
 
 	function	OnUpdate(item)
 	{
-		if (generator_enabled)
+		if (player_script == 0)
+			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
+
+		if (generator_enabled && player_script.life > 0.0)
 			Spawn()
 	}
 

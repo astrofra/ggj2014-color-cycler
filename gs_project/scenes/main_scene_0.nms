@@ -1,5 +1,11 @@
 <Version=1.0>
 <Scene=
+	<ScriptedObject=
+		<ScriptUnit=
+			<ScriptPath="scripts/scene_manager.nut">
+			<Class="SceneManager">
+		>
+	>
 	<SceneMotionContainer>
 	<Items=
 		<MCamera=
@@ -1327,7 +1333,7 @@
 		<MObject=
 			<MItem=
 				<Id="original_enemy_0">
-				<UId=20>
+				<UId=19>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -1446,7 +1452,7 @@
 		<MObject=
 			<MItem=
 				<Id="original_enemy_1">
-				<UId=21>
+				<UId=20>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -1550,7 +1556,6 @@
 						<Y=1.000000>
 						<Z=520.000000>
 					>
-					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -1566,7 +1571,7 @@
 		<MObject=
 			<MItem=
 				<Id="original_enemy_2">
-				<UId=22>
+				<UId=21>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -1685,7 +1690,7 @@
 		<MObject=
 			<MItem=
 				<Id="original_bullet_enemy">
-				<UId=23>
+				<UId=22>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -1758,7 +1763,7 @@
 		<MObject=
 			<MItem=
 				<Id="original_bullet_player">
-				<UId=24>
+				<UId=23>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -1831,7 +1836,7 @@
 		<MObject=
 			<MItem=
 				<Id="ground">
-				<UId=25>
+				<UId=24>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -1870,7 +1875,7 @@
 		<MObject=
 			<MItem=
 				<Id="ground2">
-				<UId=26>
+				<UId=25>
 				<Inactive>
 				<Helper>
 				<Priority=0.500000>
@@ -1915,7 +1920,7 @@
 		<MObject=
 			<MItem=
 				<Id="Plane">
-				<UId=27>
+				<UId=26>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -1959,7 +1964,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=28>
+				<UId=27>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2031,7 +2036,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=29>
+				<UId=28>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2103,7 +2108,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=30>
+				<UId=29>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2175,7 +2180,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=31>
+				<UId=30>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2247,7 +2252,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=32>
+				<UId=31>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2319,7 +2324,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=33>
+				<UId=32>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2391,7 +2396,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=34>
+				<UId=33>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2463,7 +2468,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=35>
+				<UId=34>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2535,7 +2540,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=36>
+				<UId=35>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2607,7 +2612,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=37>
+				<UId=36>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2679,7 +2684,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=38>
+				<UId=37>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2751,7 +2756,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=39>
+				<UId=38>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2823,7 +2828,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=40>
+				<UId=39>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2895,7 +2900,7 @@
 		<MObject=
 			<MItem=
 				<Id="rock">
-				<UId=41>
+				<UId=40>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2967,7 +2972,7 @@
 		<MObject=
 			<MItem=
 				<Id="enemy_generator_0">
-				<UId=42>
+				<UId=41>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -3035,7 +3040,7 @@
 		<MObject=
 			<MItem=
 				<Id="enemy_generator_1">
-				<UId=43>
+				<UId=42>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -3103,7 +3108,7 @@
 		<MObject=
 			<MItem=
 				<Id="enemy_generator_2">
-				<UId=44>
+				<UId=43>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=

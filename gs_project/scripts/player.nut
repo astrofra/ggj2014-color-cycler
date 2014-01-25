@@ -101,6 +101,9 @@ class	Player
 
 	function	OnUpdate(item)
 	{
+		if (life <= 0.0)
+			return
+
 		if (pad_device != 0)
 		{
 			pad_vector.x = DeviceInputValue(pad_device, DeviceAxisX)
@@ -171,9 +174,16 @@ class	Player
 
 	function	Hit(_damage = 1.0)
 	{
+		if (life <= 0.0)
+			return
+
 		print("Player::Hit() !!!!")
 		life -= _damage
+		SceneGetScriptInstance(g_scene).SetLifeBar(life.tofloat())
 		print("Player::Hit() life = " + life.tostring())
+
+		if (life <= 0.0)
+			SceneGetScriptInstance(g_scene).EndGame()
 	}
 
 	function	HearSfxFromLocation(_sound_filename = "", _pos = Vector(0,0,0), far_distance = Mtr(15.0), sound_volume = 1.0)
