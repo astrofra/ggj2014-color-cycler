@@ -82,6 +82,7 @@ class	EnemyHandler
 		cannon = CannonHandler(bullet_item_name)
 		cannon.bullet_speed = bullet_speed
  		cannon.bullet_frequency	= bullet_frequency
+		cannon.bullet_lifetime = bullet_lifetime
 
 		//	Spawn(position)
 	}

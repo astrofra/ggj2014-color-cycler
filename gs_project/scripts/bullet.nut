@@ -13,6 +13,9 @@ class	BulletHandler
 	body			=	0
 	velocity		=	0
 	dispatch		=	0
+
+	alive			=	true
+
 	bullet_lifetime	=	Sec(5.0)
 	life_clock		=	-1
 
@@ -35,10 +38,16 @@ class	BulletHandler
 	{
 		if (dispatch != 0)
 			dispatch(item)
+
+		if (life_clock > 0 && (g_clock - life_clock > SecToTick(bullet_lifetime)))
+			Die(item)
 	}
 
 	function	OnCollision(item, with_item)
 	{
+		if (!alive)
+			return
+
 		print("BulletHandler::OnCollision() with_item = " + ItemGetName(with_item))
 
 		if (player_script == 0)
@@ -58,22 +67,28 @@ class	BulletHandler
 				_with_item_script.Hit(hit_damage)
 		}
 
-		dispatch = EmitHitSound
+		if ("HearSfxFromLocation" in player_script)
+			player_script.HearSfxFromLocation("audio/SFX_hit.wav", ItemGetPosition(item), Mtr(30.0))
+
+		Die(item)
+	}
+
+	function	Die(item)
+	{
+		alive = false
+
+		ItemSetLinearVelocity(item, Vector(0,0,0))
+		ItemSetPhysicMode(item, PhysicModeNone)
+		ItemSetCommandList(item, "toscale 0.1,0.1,0.1,0.1;")
+
+		dispatch = UnSpawn
 	}
 
 	function	OnPhysicStep(item, dt)
 	{
 	}
 
-	function	EmitHitSound(item)
-	{
-		if ("HearSfxFromLocation" in player_script)
-			player_script.HearSfxFromLocation("audio/SFX_hit.wav", ItemGetPosition(item), Mtr(30.0))
-
-		dispatch = Die
-	}
-
-	function	Die(item)
+	function	UnSpawn(item)
 	{
 		dispatch = 0
 		SceneDeleteItem(g_scene, item)
@@ -86,9 +101,10 @@ class	CannonHandler
 	position			=	0
 	direction			=	0
 	original_bullet		=	0
-	cannon_len			=	Mtr(2.0)
+	cannon_len			=	Mtr(0.5)
 	bullet_speed		=	1.0
 	bullet_frequency	=	15
+	bullet_lifetime		=	Sec(5.0)
 	shoot_timeout		=	0.0
 	pos_y				=	Mtr(1.0)
 
@@ -123,6 +139,8 @@ class	CannonHandler
 			local	_new_bullet = SceneDuplicateItem(g_scene, original_bullet)
 			ItemRenderSetup(_new_bullet, g_factory)
 			SceneSetupItem(g_scene, _new_bullet)
+			ItemGetScriptInstance(_new_bullet).bullet_lifetime = bullet_lifetime
+			ItemGetScriptInstance(_new_bullet).life_clock = g_clock
 
 			local	_pos = position + direction.Scale(cannon_len)
 			ItemSetPosition(_new_bullet, _pos)

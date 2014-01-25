@@ -1372,7 +1372,7 @@
 							>
 							<Parm=
 								<Id="bullet_frequency">
-								<Value=0.250000>
+								<Value=0.500000>
 							>
 							<Parm=
 								<Id="shooting_range">
@@ -1380,7 +1380,7 @@
 							>
 							<Parm=
 								<Id="bullet_lifetime">
-								<Value=5.000000>
+								<Value=10.000000>
 							>
 						>
 					>
@@ -1431,6 +1431,7 @@
 						<Y=1.000000>
 						<Z=500.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -1614,11 +1615,11 @@
 							>
 							<Parm=
 								<Id="bullet_frequency">
-								<Value=50.000000>
+								<Value=10.000000>
 							>
 							<Parm=
 								<Id="bullet_lifetime">
-								<Value=5.000000>
+								<Value=3.000000>
 							>
 						>
 					>
@@ -1669,7 +1670,6 @@
 						<Y=1.000000>
 						<Z=540.000000>
 					>
-					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
