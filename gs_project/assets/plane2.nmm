@@ -39,10 +39,4 @@
 		<UV=0>
 		<Channel="Opacity">
 	>
-	<TextureStage=
-		<Index=2>
-		<Texture="assets/Floor2_Illum.png">
-		<UV=0>
-		<Channel="SelfIllum">
-	>
 >
