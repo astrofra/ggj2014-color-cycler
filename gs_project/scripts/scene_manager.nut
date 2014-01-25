@@ -170,6 +170,13 @@ class	SceneManager
 	{
 		enemy_count--
 		RefreshEnemyCount()
+
+		if (enemy_count <= 0)
+		{
+			wave++
+			FreezeAllWaves()
+			StartWave()
+		}
 	}
 
 	function	RefreshEnemyCount()
