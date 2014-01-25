@@ -139,7 +139,7 @@ class	CannonHandler
 			local	_new_bullet = SceneDuplicateItem(g_scene, original_bullet)
 			ItemRenderSetup(_new_bullet, g_factory)
 			SceneSetupItem(g_scene, _new_bullet)
-			ItemSetName(_new_enemy, "new_bullet")
+			ItemSetName(_new_bullet, "new_bullet")
 			ItemGetScriptInstance(_new_bullet).bullet_lifetime = bullet_lifetime
 			ItemGetScriptInstance(_new_bullet).life_clock = g_clock
 

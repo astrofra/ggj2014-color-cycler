@@ -68,7 +68,7 @@ class	Player
 
 	sfx_table			=	0
 
-	life				=	100.0
+	life				=	0.0
 
 	bullet_item_name	=	"original_bullet_player"
 

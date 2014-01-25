@@ -48,6 +48,11 @@ class	SceneManager
 			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
 	}
 
+	function	OnSetupDone(scene)
+	{
+		EndGame()
+	}
+
 	function 	EndGame()
 	{
 		dispatch = GoToStandBy
