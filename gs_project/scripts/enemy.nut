@@ -28,10 +28,12 @@ class	EnemyHandler
 	position			=	0
 	position_dt			=	0
 	velocity			=	0
+	sideway_vector		=	0
 
 	initial_position_dt	=	0
 	initial_distance_to_player	=	0
 
+	current_dist_to_player	=	0
 	distance_to_player	=	Mtr(5.0)
 	distance_dt			=	0.0
 	strength			=	1.0
@@ -48,6 +50,7 @@ class	EnemyHandler
 
 		position_dt = Vector(0,0,0)
 		initial_position_dt = Vector(0,0,0)
+		sideway_vector = Vector(0,0,0)
 
 		velocity = Vector(0,0,0)
 		position = ItemGetPosition(item)
@@ -86,13 +89,17 @@ class	EnemyHandler
 			dispatch(item)
 
 		position_dt = player_script.position - position
-		local	current_dist_to_player = position_dt.Len()
+		current_dist_to_player = position_dt.Len()
 		distance_dt = distance_to_player - current_dist_to_player
 
 		local	_d_min = distance_to_player * 0.9
 		local	_d_max = initial_distance_to_player
 		local	dist_ramp = RangeAdjust(Clamp(current_dist_to_player, _d_min, _d_max), _d_min, _d_max, 0.0, 1.0)
 		position_dt = position_dt.Lerp(1.0 - dist_ramp, initial_position_dt)
+
+		sideway_vector = player_script.position - position
+		sideway_vector = sideway_vector.ApplyMatrix(RotationMatrixY(Deg(90.0)))
+		sideway_vector = sideway_vector.Normalize()
 	}
 
 	function	OnPhysicStep(item, dt)
@@ -110,6 +117,9 @@ class	EnemyHandler
 
 			if (velocity.Len() > max_speed)
 				_force -= velocity.Normalize().Scale(velocity.Len() - max_speed)
+
+			local	side_ramp = RangeAdjust(Clamp(current_dist_to_player, distance_to_player * 0.5, distance_to_player * 1.5), distance_to_player * 0.5, distance_to_player * 1.5, 0.0, 1.0)
+			_force += sideway_vector.Scale(side_ramp * strength * 0.5)
 
 			_force = _force.Scale(strength)
 
