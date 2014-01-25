@@ -60,6 +60,7 @@ class	EnemyHandler
 	bullet_frequency	=	5.0
 
 	bullet_lifetime		=	Sec(5.0)
+	previous_enemy		=	0
 
 	bullet_item_name	=	"original_bullet_enemy"
 
@@ -89,7 +90,7 @@ class	EnemyHandler
 
 	function	OnCollision(item, with_item)
 	{
-		print("BulletHandler::OnCollision() with_item = " + ItemGetName(with_item))
+		//	print("BulletHandler::OnCollision() with_item = " + ItemGetName(with_item))
 
 		if (player_script == 0)
 			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
@@ -151,11 +152,17 @@ class	EnemyHandler
 		local	_d_min = distance_to_player * 0.9
 		local	_d_max = initial_distance_to_player
 		local	dist_ramp = RangeAdjust(Clamp(current_dist_to_player, _d_min, _d_max), _d_min, _d_max, 0.0, 1.0)
-//		position_dt = position_dt.Lerp((1.0 - dist_ramp) * range_enforcer, initial_position_dt)
 
 		sideway_vector = player_script.position - position
 		sideway_vector = sideway_vector.ApplyMatrix(RotationMatrixY(Deg(90.0)))
 		sideway_vector = sideway_vector.Normalize()
+
+		if (previous_enemy != 0 && previous_enemy != null && ObjectIsValid(previous_enemy))
+		{
+			local	_prev_enemy_pos = ItemGetPosition(previous_enemy)
+			local	_escape_dt = (position - _prev_enemy_pos).Normalize().Scale(0.5)
+			sideway_vector += _escape_dt
+		}
 
 		cannon.Update(ItemGetPosition(item), (player_script.position - position).Normalize())
 
@@ -255,6 +262,8 @@ class	EnemyGenerator
 	spawn_count				=	0
 	generator_enabled		=	true
 
+	previous_enemy			=	0
+
 	function	OnSetup(item)
 	{
 		if (player_script == 0)
@@ -294,9 +303,13 @@ class	EnemyGenerator
 			ItemSetName(_new_enemy, "new_enemy")
 
 			ItemGetScriptInstance(_new_enemy).Spawn(position)
+			if (previous_enemy != 0 && previous_enemy != null && ObjectIsValid(previous_enemy))
+				ItemGetScriptInstance(_new_enemy).previous_enemy = previous_enemy
 
 			spawn_timeout = g_clock
 			spawn_count--
+
+			previous_enemy = _new_enemy
 		}
 	}
 }

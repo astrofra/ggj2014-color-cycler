@@ -48,7 +48,7 @@ class	BulletHandler
 		if (!alive)
 			return
 
-		print("BulletHandler::OnCollision() with_item = " + ItemGetName(with_item))
+		//	print("BulletHandler::OnCollision() with_item = " + ItemGetName(with_item))
 
 		if (player_script == 0)
 			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))

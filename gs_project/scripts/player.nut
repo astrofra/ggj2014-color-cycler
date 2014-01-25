@@ -111,7 +111,11 @@ class	Player
 	function	OnUpdate(item)
 	{
 		if (life <= 0.0)
+		{
+			pad_vector = pad_vector.Scale(0.5)
+			pad_heading = pad_heading.Scale(0.5)
 			return
+		}
 
 		if (pad_device != 0)
 		{
