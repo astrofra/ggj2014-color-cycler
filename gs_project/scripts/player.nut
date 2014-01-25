@@ -18,6 +18,7 @@ class	Player
 	velocity			=	0
 	angular_velocity	=	0
 	vector_front		=	0
+	vector_pad_overide	=	0.0
 
 	direction_item		=	0
 	angle				=	0
@@ -58,6 +59,11 @@ class	Player
 			pad_heading.z = DeviceInputValue(pad_device, DeviceAxisT)
 		}
 
+		if (pad_vector.Len() > 0.0)
+			vector_pad_overide = Clamp(vector_pad_overide + 10.0 * g_dt_frame, 0.0, 1.0)
+		else
+			vector_pad_overide = Clamp(vector_pad_overide - 0.5 * g_dt_frame, 0.0, 1.0)
+
 		if (fabs(pad_heading.z) > 0.0)
 			direction_overide = Clamp(direction_overide + 10.0 * g_dt_frame, 0.0, 1.0)
 		else
@@ -68,7 +74,8 @@ class	Player
 		local	angle_from_pad_vector = Vector(0,0,1).AngleWithVector(pad_vector.Normalize()) * ((Vector(0,0,1).Cross(pad_vector.Normalize())).y < 0.0?-1.0:1.0)
 		local	angle_from_pad_heading = Vector(0,0,1).AngleWithVector(pad_heading.Normalize()) * ((Vector(0,0,1).Cross(pad_heading.Normalize())).y < 0.0?-1.0:1.0)
 
-		angle = Lerp(direction_overide, angle_from_pad_vector, angle_from_pad_heading)
+		if ((pad_vector.Len() > 0.0) || (pad_heading.Len() > 0.0))
+			angle = Lerp(direction_overide, angle_from_pad_vector, angle_from_pad_heading)
 
 		ItemSetRotation(direction_item, Vector(0, angle, 0))
 
