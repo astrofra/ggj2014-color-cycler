@@ -55,7 +55,7 @@ class	EnemyHandler
 		velocity = Vector(0,0,0)
 		position = ItemGetPosition(item)
 
-		Spawn(position)
+		//	Spawn(position)
 	}
 
 	function	Spawn(_position)
@@ -167,5 +167,57 @@ class	EnemyHandler
 
 class	EnemyGenerator
 {
-	
+/*<
+	<Parameter =
+		<spawn_frequency = <Name = "Spawn frequency (Hz)"> <Type = "Float"> <Default = 15.0>>
+		<enemy_name = <Name = "Enenmy item name"> <Type = "String"> <Default = "original_enemy_0">>
+	>
+>*/
+
+	spawn_frequency			=	15.0
+	spawn_timeout			=	0.0
+	player_script			=	0
+
+	enemy_name				=	"original_enemy_0"
+	original_enemy			=	0
+
+	pos_y					=	0
+
+	position				=	0
+
+	function	OnSetup(item)
+	{
+		if (player_script == 0)
+			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
+
+		original_enemy = SceneFindItem(g_scene, enemy_name)
+		pos_y = ItemGetPosition(original_enemy).y
+
+		position = ItemGetPosition(item)
+		position.y = pos_y
+
+		if (spawn_frequency <= 0.0)
+			spawn_frequency = 1.0
+	}
+
+	function	OnUpdate(item)
+	{
+		Spawn()
+	}
+
+	function	Spawn()
+	{
+		local	_spawn_time_interval = 1.0 / spawn_frequency
+
+		if (original_enemy != 0 && g_clock - spawn_timeout > SecToTick(_spawn_time_interval))
+		{
+			local	_new_enemy = SceneDuplicateItem(g_scene, original_enemy)
+			ItemRenderSetup(_new_enemy, g_factory)
+			SceneSetupItem(g_scene, _new_enemy)
+
+			ItemGetScriptInstance(_new_enemy).Spawn(position)
+
+			spawn_timeout = g_clock
+		}
+	}
 }
