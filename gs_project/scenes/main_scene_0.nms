@@ -2447,7 +2447,7 @@
 		<MObject=
 			<MItem=
 				<Id="enemy_generator">
-				<UId=36>
+				<UId=35>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2500,7 +2500,6 @@
 						<Y=2.000000>
 						<Z=2.000000>
 					>
-					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -2516,7 +2515,7 @@
 		<MObject=
 			<MItem=
 				<Id="original_enemy_0">
-				<UId=37>
+				<UId=36>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2546,6 +2545,26 @@
 							<Parm=
 								<Id="distance_rand">
 								<Value=0.000000>
+							>
+							<Parm=
+								<Id="collision_damage">
+								<Value=0.250000>
+							>
+							<Parm=
+								<Id="hit_damage">
+								<Value=1.000000>
+							>
+							<Parm=
+								<Id="bullet_speed">
+								<Value=10.000000>
+							>
+							<Parm=
+								<Id="bullet_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="shooting_range">
+								<Value=7.500000>
 							>
 						>
 					>
@@ -2596,6 +2615,7 @@
 						<Y=1.000000>
 						<Z=500.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -2611,7 +2631,7 @@
 		<MObject=
 			<MItem=
 				<Id="original_enemy_1">
-				<UId=38>
+				<UId=37>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2641,6 +2661,14 @@
 							<Parm=
 								<Id="distance_rand">
 								<Value=0.000000>
+							>
+							<Parm=
+								<Id="collision_damage">
+								<Value=0.250000>
+							>
+							<Parm=
+								<Id="hit_damage">
+								<Value=1.000000>
 							>
 						>
 					>
@@ -2706,7 +2734,7 @@
 		<MObject=
 			<MItem=
 				<Id="original_enemy_2">
-				<UId=39>
+				<UId=38>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -2736,6 +2764,26 @@
 							<Parm=
 								<Id="distance_rand">
 								<Value=0.000000>
+							>
+							<Parm=
+								<Id="shooting_range">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="collision_damage">
+								<Value=0.250000>
+							>
+							<Parm=
+								<Id="hit_damage">
+								<Value=1.000000>
+							>
+							<Parm=
+								<Id="bullet_speed">
+								<Value=0.500000>
+							>
+							<Parm=
+								<Id="bullet_frequency">
+								<Value=5.000000>
 							>
 						>
 					>

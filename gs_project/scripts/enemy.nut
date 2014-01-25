@@ -3,6 +3,8 @@
 	Author: astrofra
 */
 
+Include("scripts/bullet.nut")
+
 /*!
 	@short	EnemyHandler
 	@author	astrofra
@@ -12,12 +14,15 @@ class	EnemyHandler
 /*<
 	<Parameter =
 		<distance_to_player = <Name = "Distance to player (m)"> <Type = "Float"> <Default = 5.0>>
+		<shooting_range = <Name = "Shooting range (m)"> <Type = "Float"> <Default = 5.0>>
 		<distance_rand = <Name = "Distance randomize (m)"> <Type = "Float"> <Default = 1.0>>
 		<max_speed = <Name = "Max speed (mtrs)"> <Type = "Float"> <Default = 5.0>>
 		<strength = <Name = "Force strength"> <Type = "Float"> <Default = 10.0>>
 		<inertia = <Name = "Force inertia"> <Type = "Float"> <Default = 0.25>>
 		<collision_damage = <Name = "Collision damage"> <Type = "Float"> <Default = 0.25>>
 		<hit_damage = <Name = "Bullet hit damage"> <Type = "Float"> <Default = 1.0>>
+		<bullet_speed = <Name = "Bullet speed"> <Type = "Float"> <Default = 0.5>>
+		<bullet_frequency = <Name = "Bullet frequency (Hz)"> <Type = "Float"> <Default = 5.0>>
 	>
 >*/
 	player				=	0
@@ -29,6 +34,7 @@ class	EnemyHandler
 	body				=	0
 
 	position			=	0
+	direction			=	0
 	position_dt			=	0
 	velocity			=	0
 	sideway_vector		=	0
@@ -39,6 +45,7 @@ class	EnemyHandler
 
 	current_dist_to_player	=	0
 	distance_to_player	=	Mtr(5.0)
+	shooting_range		=	Mtr(5.0)
 	distance_dt			=	0.0
 	strength			=	1.0
 	inertia				=	0.25
@@ -46,6 +53,10 @@ class	EnemyHandler
 
 	collision_damage	=	0.25
 	hit_damage			=	1.0
+
+	cannon				=	0
+	bullet_speed		=	0.5
+	bullet_frequency	=	5.0
 
 	function	OnSetup(item)
 	{
@@ -58,9 +69,14 @@ class	EnemyHandler
 		position_dt = Vector(0,0,0)
 		initial_position_dt = Vector(0,0,0)
 		sideway_vector = Vector(0,0,0)
+		direction = Vector(0,0,0)
 
 		velocity = Vector(0,0,0)
 		position = ItemGetPosition(item)
+
+		cannon = CannonHandler()
+		cannon.bullet_speed = bullet_speed
+ 		cannon.bullet_frequency	= bullet_frequency
 
 		//	Spawn(position)
 	}
@@ -131,12 +147,19 @@ class	EnemyHandler
 		sideway_vector = player_script.position - position
 		sideway_vector = sideway_vector.ApplyMatrix(RotationMatrixY(Deg(90.0)))
 		sideway_vector = sideway_vector.Normalize()
+
+		cannon.Update(ItemGetPosition(item), (player_script.position - position).Normalize())
+		if (current_dist_to_player < shooting_range)
+			cannon.Shoot()
 	}
 
 	function	OnPhysicStep(item, dt)
 	{
 		position = ItemGetPosition(item)
 		velocity = ItemGetLinearVelocity(item)
+
+		if (velocity.Len() > 0.01)
+			direction = velocity.Normalize()
 
 		if (awaken)
 		{
@@ -163,7 +186,7 @@ class	EnemyHandler
 		}
 	}
 
-	function	Hit()
+	function	Hit(_damage)
 	{
 		if (dying)
 			return
