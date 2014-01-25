@@ -16,6 +16,7 @@ class	Player
 	<Parameter =
 		<strength = <Name = "Player speed"> <Type = "Float"> <Default = 100.0>>
 		<bullet_speed = <Name = "Bullet speed"> <Type = "Float"> <Default = 1.0>>
+		<bullet_frequency = <Name = "Bullet frequency (Hz)"> <Type = "Float"> <Default = 15.0>>
 	>
 >*/
 	pad_device			=	0
@@ -38,6 +39,7 @@ class	Player
 
 	cannon				=	0
 	bullet_speed		=	1.0
+	bullet_frequency	=	15.0
 
 	function	OnSetup(item)
 	{
@@ -61,6 +63,7 @@ class	Player
 
 		cannon = CannonHandler()
 		cannon.bullet_speed = bullet_speed
+ 		cannon.bullet_frequency	= bullet_frequency
 	}
 
 	function	OnUpdate(item)
@@ -97,7 +100,7 @@ class	Player
 			}
 			else
 			{
-				angle = angle_from_pad_vector_overide
+				angle = angle_from_pad_vector
 				direction =  pad_vector.Normalize()
 			}
 		}
