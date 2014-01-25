@@ -2971,7 +2971,7 @@
 		>
 		<MObject=
 			<MItem=
-				<Id="enemy_generator_0">
+				<Id="enemy_generator_xxx">
 				<UId=41>
 				<Active>
 				<Priority=0.500000>
@@ -3039,7 +3039,7 @@
 		>
 		<MObject=
 			<MItem=
-				<Id="enemy_generator_1">
+				<Id="enemy_generator_0">
 				<UId=42>
 				<Active>
 				<Priority=0.500000>
@@ -3093,6 +3093,7 @@
 						<Y=2.000000>
 						<Z=2.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -3107,7 +3108,7 @@
 		>
 		<MObject=
 			<MItem=
-				<Id="enemy_generator_2">
+				<Id="enemy_generator_0">
 				<UId=43>
 				<Active>
 				<Priority=0.500000>
@@ -3161,6 +3162,7 @@
 						<Y=2.000000>
 						<Z=2.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -3175,7 +3177,7 @@
 		>
 		<MObject=
 			<MItem=
-				<Id="enemy_generator_3">
+				<Id="enemy_generator_0">
 				<UId=44>
 				<Active>
 				<Priority=0.500000>
@@ -3229,6 +3231,7 @@
 						<Y=2.000000>
 						<Z=2.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -3243,7 +3246,7 @@
 		>
 		<MObject=
 			<MItem=
-				<Id="enemy_generator_4">
+				<Id="enemy_generator_0">
 				<UId=45>
 				<Active>
 				<Priority=0.500000>
@@ -3297,6 +3300,7 @@
 						<Y=2.000000>
 						<Z=2.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -3336,7 +3340,6 @@
 						<Y=0.550000>
 						<Z=0.000000>
 					>
-					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
