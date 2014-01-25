@@ -13,6 +13,8 @@ class	BulletHandler
 	body			=	0
 	velocity		=	0
 	dispatch		=	0
+	bullet_lifetime	=	Sec(5.0)
+	life_clock		=	-1
 
 	hit_damage		=	1.0
 

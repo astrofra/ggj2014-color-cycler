@@ -1378,6 +1378,10 @@
 								<Id="shooting_range">
 								<Value=7.500000>
 							>
+							<Parm=
+								<Id="bullet_lifetime">
+								<Value=5.000000>
+							>
 						>
 					>
 				>
@@ -1493,6 +1497,10 @@
 								<Id="bullet_frequency">
 								<Value=5.000000>
 							>
+							<Parm=
+								<Id="bullet_lifetime">
+								<Value=5.000000>
+							>
 						>
 					>
 				>
@@ -1590,7 +1598,7 @@
 							>
 							<Parm=
 								<Id="shooting_range">
-								<Value=7.500000>
+								<Value=12.000000>
 							>
 							<Parm=
 								<Id="collision_damage">
@@ -1606,7 +1614,11 @@
 							>
 							<Parm=
 								<Id="bullet_frequency">
-								<Value=10.000000>
+								<Value=50.000000>
+							>
+							<Parm=
+								<Id="bullet_lifetime">
+								<Value=5.000000>
 							>
 						>
 					>
@@ -3104,7 +3116,7 @@
 						<ParmList=
 							<Parm=
 								<Id="spawn_frequency">
-								<Value=0.500000>
+								<Value=0.800000>
 							>
 							<Parm=
 								<Id="enemy_name">

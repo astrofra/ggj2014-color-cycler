@@ -23,6 +23,7 @@ class	EnemyHandler
 		<hit_damage = <Name = "Bullet hit damage"> <Type = "Float"> <Default = 1.0>>
 		<bullet_speed = <Name = "Bullet speed"> <Type = "Float"> <Default = 0.5>>
 		<bullet_frequency = <Name = "Bullet frequency (Hz)"> <Type = "Float"> <Default = 5.0>>
+		<bullet_lifetime = <Name = "Bullet life (sec)"> <Type = "Float"> <Default = 5.0>>
 	>
 >*/
 	player				=	0
@@ -57,6 +58,8 @@ class	EnemyHandler
 	cannon				=	0
 	bullet_speed		=	0.5
 	bullet_frequency	=	5.0
+
+	bullet_lifetime		=	Sec(5.0)
 
 	bullet_item_name	=	"original_bullet_enemy"
 
@@ -151,6 +154,7 @@ class	EnemyHandler
 		sideway_vector = sideway_vector.Normalize()
 
 		cannon.Update(ItemGetPosition(item), (player_script.position - position).Normalize())
+
 		if (current_dist_to_player < shooting_range)
 			cannon.Shoot()
 	}
