@@ -20,6 +20,7 @@ class	SceneManager
 	player_script		=	0
 
 	wave				=	0
+	wave_label			=	0
 
 	function	OnSetup(scene)
 	{
@@ -46,8 +47,18 @@ class	SceneManager
 		game_over.refresh()
 		SpriteSetOpacity(game_over.window, 0.0)
 
+		wave_label = Label(ui, 1024, 256, (1280 - 1024) * 0.5, (960 - 256) * 0.5)
+		wave_label.label = "WAVE 0"
+		wave_label.label_color = 0xffffffff
+		wave_label.font = "visitor1"
+		wave_label.font_size = 190
+		wave_label.refresh()
+		SpriteSetOpacity(wave_label.window, 0.0)
+
 		if (player_script == 0)
 			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
+
+		FreezeAllWaves()
 	}
 
 	function	OnSetupDone(scene)
@@ -93,6 +104,7 @@ class	SceneManager
 		WindowSetCommandList(game_over.window, "toalpha 0,0.25;toalpha 0.1,0.0;")
 		player_script.ResetGame(SceneFindItem(g_scene, "player"))
 		WipeAllEnemies(scene)
+		StartWave()
 		wave = 0
 		dispatch = 0
 	}
@@ -116,12 +128,27 @@ class	SceneManager
 
 	function	StartWave()
 	{
-		foreach(_item in SceneGetItemList(scene))
+		wave_label.label = "WAVE #" + wave.tostring()
+		wave_label.refresh()
+		WindowSetCommandList(wave_label.window, "toalpha 0,0;toalpha 0.2,1.0;nop 0.25;toalpha 0.2,0.0;")
+
+		foreach(_item in SceneGetItemList(g_scene))
 			if (_item != null && ObjectIsValid(_item) && ItemGetName(_item) != null && (ItemGetName(_item) == "enemy_generator_" + wave.tostring()))
 				if (ItemGetScriptInstanceCount(_item) > 0)
 				{
 					local	_script = ItemGetScriptInstance(_item)
-					_script.enable = true
+					_script.generator_enabled = true
+				}
+	}
+
+	function	FreezeAllWaves()
+	{
+		foreach(_item in SceneGetItemList(g_scene))
+			if (_item != null && ObjectIsValid(_item) && ItemGetName(_item) != null && (ItemGetName(_item).find("enemy_generator_") != null))
+				if (ItemGetScriptInstanceCount(_item) > 0)
+				{
+					local	_script = ItemGetScriptInstance(_item)
+					_script.generator_enabled = false
 				}
 	}
 }
