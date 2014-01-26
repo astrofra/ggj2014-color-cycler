@@ -71,7 +71,7 @@ class	SoundEmitter
 		local	_dist = _current_pos.Dist(ItemGetWorldPosition(item))
 		local	_vol = Clamp(RangeAdjust(_dist, near_distance, far_distance, sound_volume, 0.0), 0.0, sound_volume)
 		MixerChannelSetGain(sfx_mixer, sfx_channel, _vol)
-		if (vibrate_enabled && ItemGetScriptInstanceCount(receptor_item) > 0)
+		if (0)	//	(vibrate_enabled && ItemGetScriptInstanceCount(receptor_item) > 0)
 			if ("pad_device" in ItemGetScriptInstance(receptor_item))
 			{
 				local	pad_device = ItemGetScriptInstance(receptor_item).pad_device

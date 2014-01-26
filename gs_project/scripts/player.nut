@@ -75,6 +75,8 @@ class	Player
 
 	life				=	0.0
 
+	hit_response		=	0.0
+
 	main_light				=	0
 	color_index				=	1
 	color_switch_timeout	=	Sec(1.0)
@@ -140,6 +142,9 @@ class	Player
 	function	OnUpdate(item)
 	{
 		music_manager.Update()
+
+		hit_response = Clamp(hit_response - g_dt_frame, 0.0, 1.0)
+			DeviceSetEffect(pad_device, DeviceEffectVibrate, hit_response)
 
 		if (keyboard_device != 0 && DeviceIsKeyDown(keyboard_device, KeyEscape))
 		{
@@ -249,6 +254,8 @@ class	Player
 		life -= _damage
 		RefreshHud()
 		print("Player::Hit() life = " + life.tostring())
+
+		hit_response = Clamp(hit_response + _damage * 0.05, 0.0, 1.0)
 
 		if (life <= 0.0)
 			SceneGetScriptInstance(g_scene).EndGame()

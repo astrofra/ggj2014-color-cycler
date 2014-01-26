@@ -56,9 +56,9 @@ class	MusicHandler
 			else
 			{
 				if (music_index == _idx)
-					gain_table[_idx] = Clamp(gain_table[_idx] + g_dt_frame, 0.0, 1.0)
+					gain_table[_idx] = Clamp(gain_table[_idx] + 1.5 * g_dt_frame, 0.0, 1.0)
 				else
-					gain_table[_idx] = Clamp(gain_table[_idx] - g_dt_frame, 0.0, 1.0)
+					gain_table[_idx] = Clamp(gain_table[_idx] - 1.5 * g_dt_frame, 0.0, 1.0)
 			}
 
 			MixerChannelSetGain(g_mixer, _chan, gain_table[_idx])
