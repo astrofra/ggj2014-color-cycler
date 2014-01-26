@@ -5,7 +5,7 @@
 		<MCamera=
 			<MItem=
 				<Id="Camera001">
-				<UId=5>
+				<UId=0>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -51,7 +51,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_head">
-				<UId=6>
+				<UId=1>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -124,7 +124,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_0">
-				<UId=10>
+				<UId=2>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -197,7 +197,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_1">
-				<UId=11>
+				<UId=3>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -270,7 +270,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_2">
-				<UId=12>
+				<UId=4>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -343,7 +343,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_3">
-				<UId=13>
+				<UId=5>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -416,7 +416,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_4">
-				<UId=14>
+				<UId=6>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -489,7 +489,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_5">
-				<UId=15>
+				<UId=7>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -562,7 +562,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_6">
-				<UId=16>
+				<UId=8>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -635,7 +635,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_7">
-				<UId=17>
+				<UId=9>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -708,7 +708,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_8">
-				<UId=18>
+				<UId=10>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -781,7 +781,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_9">
-				<UId=19>
+				<UId=11>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -854,7 +854,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_10">
-				<UId=20>
+				<UId=12>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -927,7 +927,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_11">
-				<UId=21>
+				<UId=13>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -1000,7 +1000,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_12">
-				<UId=22>
+				<UId=14>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -1073,7 +1073,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_13">
-				<UId=23>
+				<UId=15>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -1146,7 +1146,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_14">
-				<UId=24>
+				<UId=16>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -1219,7 +1219,7 @@
 		<MObject=
 			<MItem=
 				<Id="boss_tail_15">
-				<UId=25>
+				<UId=17>
 				<Active>
 				<Priority=0.500000>
 				<MotionPlayer=
@@ -1277,7 +1277,6 @@
 						<Y=0.000000>
 						<Z=0.000000>
 					>
-					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
