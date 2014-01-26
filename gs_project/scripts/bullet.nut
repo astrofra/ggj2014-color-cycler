@@ -107,6 +107,7 @@ class	CannonHandler
 	bullet_lifetime		=	Sec(5.0)
 	shoot_timeout		=	0.0
 	pos_y				=	Mtr(1.0)
+	hit_damage			=	1.0
 
 	constructor(_bullet_item_name = "original_bullet")
 	{
@@ -142,6 +143,7 @@ class	CannonHandler
 			ItemSetName(_new_bullet, "new_bullet")
 			ItemGetScriptInstance(_new_bullet).bullet_lifetime = bullet_lifetime
 			ItemGetScriptInstance(_new_bullet).life_clock = g_clock
+			ItemGetScriptInstance(_new_bullet).hit_damage = hit_damage
 
 			local	_pos = position + direction.Scale(cannon_len)
 			ItemSetPosition(_new_bullet, _pos)

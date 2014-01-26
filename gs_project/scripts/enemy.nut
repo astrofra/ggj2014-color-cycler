@@ -92,6 +92,7 @@ class	EnemyHandler
 		cannon.bullet_speed = bullet_speed
  		cannon.bullet_frequency	= bullet_frequency
 		cannon.bullet_lifetime = bullet_lifetime
+		cannon.hit_damage = hit_damage
 
 		body_mat = GeometryGetMaterialFromIndex(ItemGetGeometry(item), 0)
 
