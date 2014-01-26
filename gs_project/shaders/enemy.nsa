@@ -1,0 +1,29 @@
+<Version=1.0>
+<Shader=
+	<Input=
+		<Attribute=<Name="a_uv"><Semantic="UV0">>
+		<Attribute=<Name="a_position"><Semantic="Position">>
+		<Attribute=<Name="a_normal"><Semantic="Normal">>
+
+		<Uniform=<Name="t_tex0"><Semantic="MaterialTexture0">>
+		<Uniform=<Name="u_diffuse_color"><Semantic="MaterialDiffuse">>
+		<Uniform=<Name="u_self_color"><Semantic="MaterialSelf">>
+		<Uniform=<Name="u_ambient_color"><Semantic="MaterialAmbient">>
+	>
+	<Varying=
+		<Variable=<Name="v_uv"><Type="vec2">>
+		<Variable=<Name="v_pos"><Type="vec3">>
+		<Variable=<Name="v_normal"><Type="vec3">>
+	>
+	<VertexSource="
+// Send the untransformed vertex position to the pixel shader so that it may determine the pixel position in the primitive.
+v_normal = a_normal;
+v_uv = a_uv;
+	">
+	<PixelSource="
+vec4 tex_color = texture2D(t_tex0, v_uv);
+%diffuse% = u_diffuse_color;
+%constant% = tex_color;
+%opacity% = u_ambient_color.x * tex_color.w;
+	">
+>

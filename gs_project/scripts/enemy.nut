@@ -13,6 +13,7 @@ class	EnemyHandler
 {
 /*<
 	<Parameter =
+		<invisible_color = <Name = "Invisible color"> <Type = "Float"> <Default = 0.0>>
 		<distance_to_player = <Name = "Distance to player (m)"> <Type = "Float"> <Default = 5.0>>
 		<shooting_range = <Name = "Shooting range (m)"> <Type = "Float"> <Default = 5.0>>
 		<distance_rand = <Name = "Distance randomize (m)"> <Type = "Float"> <Default = 1.0>>
@@ -32,8 +33,10 @@ class	EnemyHandler
 	dispatch			=	0
 	awaken				=	false
 	dying				=	false
+	invisible_color		=	0
 
 	body				=	0
+	body_mat			=	0
 
 	position			=	0
 	direction			=	0
@@ -88,6 +91,8 @@ class	EnemyHandler
  		cannon.bullet_frequency	= bullet_frequency
 		cannon.bullet_lifetime = bullet_lifetime
 
+		body_mat = GeometryGetMaterialFromIndex(ItemGetGeometry(item), 0)
+
 		//	Spawn(position)
 	}
 
@@ -114,6 +119,17 @@ class	EnemyHandler
 			if ("Hit" in _with_item_script)
 				_with_item_script.Hit(collision_damage)
 		}
+	}
+
+	function	UpdateColorVisibility(item)
+	{
+		if (player_script == 0)
+			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
+
+		if (invisible_color.tointeger() == player_script.color_index)
+			MaterialSetAmbient(body_mat, Vector(0.05,0.05,0.05))
+		else
+			MaterialSetAmbient(body_mat, Vector(1,1,1))
 	}
 
 	function	Spawn(_position)
@@ -171,6 +187,8 @@ class	EnemyHandler
 
 		if (current_dist_to_player < shooting_range && player_script.life > 0.0)
 			cannon.Shoot()
+
+		UpdateColorVisibility(item)
 	}
 
 	function	OnPhysicStep(item, dt)
