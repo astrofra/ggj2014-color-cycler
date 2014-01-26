@@ -1366,11 +1366,11 @@
 							>
 							<Parm=
 								<Id="collision_damage">
-								<Value=0.250000>
+								<Value=10.000000>
 							>
 							<Parm=
 								<Id="hit_damage">
-								<Value=1.000000>
+								<Value=10.000000>
 							>
 							<Parm=
 								<Id="bullet_speed">
@@ -1497,11 +1497,11 @@
 							>
 							<Parm=
 								<Id="collision_damage">
-								<Value=0.250000>
+								<Value=10.000000>
 							>
 							<Parm=
 								<Id="hit_damage">
-								<Value=1.000000>
+								<Value=10.000000>
 							>
 							<Parm=
 								<Id="shooting_range">
@@ -1632,11 +1632,11 @@
 							>
 							<Parm=
 								<Id="collision_damage">
-								<Value=0.250000>
+								<Value=10.000000>
 							>
 							<Parm=
 								<Id="hit_damage">
-								<Value=1.000000>
+								<Value=5.000000>
 							>
 							<Parm=
 								<Id="bullet_speed">
@@ -1711,7 +1711,6 @@
 						<Y=1.000000>
 						<Z=540.000000>
 					>
-					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -1897,6 +1896,7 @@
 						<Y=1.000000>
 						<Z=10.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>

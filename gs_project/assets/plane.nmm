@@ -29,12 +29,12 @@
 	<BlendOp="Alpha">
 	<TextureStage=
 		<Index=0>
-		<Texture="assets/Floor.png">
+		<Texture="assets/Floor_Style2.png">
 		<UV=0>
 	>
 	<TextureStage=
 		<Index=1>
-		<Texture="assets/Floor.png">
+		<Texture="assets/Floor_Style2.png">
 		<UV=0>
 		<Channel="Opacity">
 	>
