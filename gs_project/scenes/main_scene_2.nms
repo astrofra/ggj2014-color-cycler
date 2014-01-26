@@ -1385,7 +1385,7 @@
 							>
 							<Parm=
 								<Id="hit_damage">
-								<Value=8.000000>
+								<Value=6.000000>
 							>
 							<Parm=
 								<Id="bullet_speed">
@@ -1516,7 +1516,7 @@
 							>
 							<Parm=
 								<Id="hit_damage">
-								<Value=8.000000>
+								<Value=6.000000>
 							>
 							<Parm=
 								<Id="shooting_range">
@@ -1651,7 +1651,7 @@
 							>
 							<Parm=
 								<Id="hit_damage">
-								<Value=5.000000>
+								<Value=4.000000>
 							>
 							<Parm=
 								<Id="bullet_speed">
@@ -1999,6 +1999,7 @@
 						<Y=20.000000>
 						<Z=20.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -4310,7 +4311,7 @@
 						<ParmList=
 							<Parm=
 								<Id="spawn_frequency">
-								<Value=0.250000>
+								<Value=4.000000>
 							>
 							<Parm=
 								<Id="enemy_name">
@@ -4382,7 +4383,7 @@
 						<ParmList=
 							<Parm=
 								<Id="spawn_frequency">
-								<Value=0.250000>
+								<Value=4.000000>
 							>
 							<Parm=
 								<Id="enemy_name">
@@ -4454,7 +4455,7 @@
 						<ParmList=
 							<Parm=
 								<Id="spawn_frequency">
-								<Value=0.250000>
+								<Value=4.000000>
 							>
 							<Parm=
 								<Id="enemy_name">
@@ -4526,7 +4527,7 @@
 						<ParmList=
 							<Parm=
 								<Id="spawn_frequency">
-								<Value=0.250000>
+								<Value=4.000000>
 							>
 							<Parm=
 								<Id="enemy_name">
@@ -4598,7 +4599,7 @@
 						<ParmList=
 							<Parm=
 								<Id="spawn_frequency">
-								<Value=0.250000>
+								<Value=4.000000>
 							>
 							<Parm=
 								<Id="enemy_name">
@@ -4670,7 +4671,7 @@
 						<ParmList=
 							<Parm=
 								<Id="spawn_frequency">
-								<Value=0.250000>
+								<Value=4.000000>
 							>
 							<Parm=
 								<Id="enemy_name">
@@ -4752,7 +4753,6 @@
 					<Y=0.424974>
 					<Z=-1.170876>
 				>
-				<ItemFlag>
 				<Target=
 					<X=0.000000>
 					<Y=0.000000>
@@ -4762,6 +4762,942 @@
 				<Registry>
 			>
 			<Template="assets/boss.nms">
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_8">
+				<UId=69>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_2">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=3.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-22.000000>
+						<Y=0.000000>
+						<Z=0.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_8">
+				<UId=70>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_1">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=7.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=22.000000>
+						<Y=0.000000>
+						<Z=0.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_8">
+				<UId=71>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_1">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=11.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-22.000000>
+						<Y=0.000000>
+						<Z=0.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_8">
+				<UId=72>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_2">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=15.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=22.000000>
+						<Y=0.000000>
+						<Z=0.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_8">
+				<UId=73>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=3.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_0">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=3.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=19.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=22.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_8">
+				<UId=74>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=3.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_0">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=3.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=23.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=-22.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_9">
+				<UId=75>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_1">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=3.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=22.000000>
+						<Y=0.000000>
+						<Z=22.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_9">
+				<UId=76>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_0">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=6.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=22.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_9">
+				<UId=77>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_2">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=9.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-22.000000>
+						<Y=0.000000>
+						<Z=22.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_9">
+				<UId=78>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_0">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=12.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-22.000000>
+						<Y=0.000000>
+						<Z=0.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_9">
+				<UId=79>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_2">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=15.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-22.000000>
+						<Y=0.000000>
+						<Z=-22.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_9">
+				<UId=80>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_0">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=18.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=-22.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="enemy_generator_9">
+				<UId=81>
+				<Active>
+				<Priority=0.500000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<ScriptedObject=
+					<ScriptUnit=
+						<ScriptPath="scripts/enemy.nut">
+						<Class="EnemyGenerator">
+						<ParmList=
+							<Parm=
+								<Id="spawn_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="enemy_name">
+								<Value="original_enemy_2">
+							>
+							<Parm=
+								<Id="wave_size">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="generator_enabled">
+								<Value=True>
+							>
+							<Parm=
+								<Id="start_after">
+								<Value=21.000000>
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<CharacterRadius=1.000000>
+					<CharacterHeight=1.000000>
+					<CharacterMaxStep=0.200000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=22.000000>
+						<Y=0.000000>
+						<Z=0.000000>
+					>
+					<Scale=
+						<X=2.000000>
+						<Y=2.000000>
+						<Z=2.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="ZYX">
+					<Registry>
+				>
+				<Geometry="">
+				<CacheGeometry=True>
+			>
 		>
 	>
 	<Links=
@@ -4823,27 +5759,27 @@
 	<CurrentCamera="main_camera">
 	<ViewMatrix=
 		<R0=
-			<X=-0.906222>
-			<Y=-0.000000>
-			<Z=-0.422803>
+			<X=0.999696>
+			<Y=0.000000>
+			<Z=-0.024649>
 			<W=0.000000>
 		>
 		<R1=
-			<X=0.392436>
-			<Y=0.372137>
-			<Z=-0.841135>
+			<X=0.015827>
+			<Y=0.766629>
+			<Z=0.641895>
 			<W=0.000000>
 		>
 		<R2=
-			<X=0.157340>
-			<Y=-0.928178>
-			<Z=-0.337238>
+			<X=0.018896>
+			<Y=-0.642090>
+			<Z=0.766396>
 			<W=0.000000>
 		>
 		<R3=
-			<X=-44.589050>
-			<Y=256.805573>
-			<Z=93.288727>
+			<X=-2.965189>
+			<Y=35.584175>
+			<Z=-46.563793>
 			<W=1.000000>
 		>
 	>
@@ -4856,27 +5792,27 @@
 			<CameraUid=-16>
 			<Matrix=
 				<R0=
-					<X=-0.906222>
-					<Y=-0.000000>
-					<Z=-0.422803>
+					<X=0.999696>
+					<Y=0.000000>
+					<Z=-0.024649>
 					<W=0.000000>
 				>
 				<R1=
-					<X=0.392436>
-					<Y=0.372137>
-					<Z=-0.841135>
+					<X=0.015827>
+					<Y=0.766629>
+					<Z=0.641895>
 					<W=0.000000>
 				>
 				<R2=
-					<X=0.157340>
-					<Y=-0.928178>
-					<Z=-0.337238>
+					<X=0.018896>
+					<Y=-0.642090>
+					<Z=0.766396>
 					<W=0.000000>
 				>
 				<R3=
-					<X=-44.589050>
-					<Y=256.805573>
-					<Z=93.288727>
+					<X=-2.965189>
+					<Y=35.584175>
+					<Z=-46.563793>
 					<W=1.000000>
 				>
 			>
