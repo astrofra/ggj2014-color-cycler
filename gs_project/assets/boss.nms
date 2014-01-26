@@ -61,6 +61,64 @@
 					<ScriptUnit=
 						<ScriptPath="scripts/boss.nut">
 						<Class="Boss">
+						<ParmList=
+							<Parm=
+								<Id="life">
+								<Value=50.000000>
+							>
+							<Parm=
+								<Id="strength">
+								<Value=10.000000>
+							>
+							<Parm=
+								<Id="inertia">
+								<Value=0.150000>
+							>
+							<Parm=
+								<Id="collision_damage">
+								<Value=0.250000>
+							>
+							<Parm=
+								<Id="hit_damage">
+								<Value=1.000000>
+							>
+							<Parm=
+								<Id="bullet_speed">
+								<Value=15.000000>
+							>
+							<Parm=
+								<Id="bullet_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="bullet_lifetime">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="invisible_color">
+								<Value=0.000000>
+							>
+							<Parm=
+								<Id="invisible_opacity">
+								<Value=0.100000>
+							>
+							<Parm=
+								<Id="distance_to_player">
+								<Value=7.000000>
+							>
+							<Parm=
+								<Id="shooting_range">
+								<Value=10.000000>
+							>
+							<Parm=
+								<Id="distance_rand">
+								<Value=1.000000>
+							>
+							<Parm=
+								<Id="max_speed">
+								<Value=5.000000>
+							>
+						>
 					>
 				>
 				<PhysicItem=
@@ -138,14 +196,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -169,6 +227,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -208,17 +267,75 @@
 					<ScriptUnit=
 						<ScriptPath="scripts/boss.nut">
 						<Class="BossPart">
+						<ParmList=
+							<Parm=
+								<Id="invisible_color">
+								<Value=0.000000>
+							>
+							<Parm=
+								<Id="invisible_opacity">
+								<Value=0.100000>
+							>
+							<Parm=
+								<Id="distance_to_player">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="shooting_range">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="distance_rand">
+								<Value=1.000000>
+							>
+							<Parm=
+								<Id="max_speed">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="life">
+								<Value=10.000000>
+							>
+							<Parm=
+								<Id="strength">
+								<Value=10.000000>
+							>
+							<Parm=
+								<Id="inertia">
+								<Value=0.250000>
+							>
+							<Parm=
+								<Id="collision_damage">
+								<Value=0.250000>
+							>
+							<Parm=
+								<Id="hit_damage">
+								<Value=1.000000>
+							>
+							<Parm=
+								<Id="bullet_speed">
+								<Value=0.500000>
+							>
+							<Parm=
+								<Id="bullet_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="bullet_lifetime">
+								<Value=5.000000>
+							>
+						>
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -242,6 +359,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -284,14 +402,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -315,6 +433,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -357,14 +476,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -388,6 +507,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -430,14 +550,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -461,6 +581,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -500,17 +621,75 @@
 					<ScriptUnit=
 						<ScriptPath="scripts/boss.nut">
 						<Class="BossPart">
+						<ParmList=
+							<Parm=
+								<Id="invisible_color">
+								<Value=0.000000>
+							>
+							<Parm=
+								<Id="invisible_opacity">
+								<Value=0.100000>
+							>
+							<Parm=
+								<Id="distance_to_player">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="shooting_range">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="distance_rand">
+								<Value=1.000000>
+							>
+							<Parm=
+								<Id="max_speed">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="life">
+								<Value=10.000000>
+							>
+							<Parm=
+								<Id="strength">
+								<Value=10.000000>
+							>
+							<Parm=
+								<Id="inertia">
+								<Value=0.250000>
+							>
+							<Parm=
+								<Id="collision_damage">
+								<Value=0.250000>
+							>
+							<Parm=
+								<Id="hit_damage">
+								<Value=1.000000>
+							>
+							<Parm=
+								<Id="bullet_speed">
+								<Value=0.500000>
+							>
+							<Parm=
+								<Id="bullet_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="bullet_lifetime">
+								<Value=5.000000>
+							>
+						>
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -534,6 +713,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -576,14 +756,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -607,6 +787,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -649,14 +830,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -680,6 +861,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -722,14 +904,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -753,6 +935,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -795,14 +978,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -826,6 +1009,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -868,14 +1052,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -899,6 +1083,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -941,14 +1126,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -972,6 +1157,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -1014,14 +1200,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -1045,6 +1231,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -1087,14 +1274,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -1118,6 +1305,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -1160,14 +1348,14 @@
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -1191,6 +1379,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>
@@ -1230,17 +1419,75 @@
 					<ScriptUnit=
 						<ScriptPath="scripts/boss.nut">
 						<Class="BossPart">
+						<ParmList=
+							<Parm=
+								<Id="invisible_color">
+								<Value=0.000000>
+							>
+							<Parm=
+								<Id="invisible_opacity">
+								<Value=0.100000>
+							>
+							<Parm=
+								<Id="distance_to_player">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="shooting_range">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="distance_rand">
+								<Value=1.000000>
+							>
+							<Parm=
+								<Id="max_speed">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="life">
+								<Value=10.000000>
+							>
+							<Parm=
+								<Id="strength">
+								<Value=10.000000>
+							>
+							<Parm=
+								<Id="inertia">
+								<Value=0.250000>
+							>
+							<Parm=
+								<Id="collision_damage">
+								<Value=0.250000>
+							>
+							<Parm=
+								<Id="hit_damage">
+								<Value=1.000000>
+							>
+							<Parm=
+								<Id="bullet_speed">
+								<Value=0.500000>
+							>
+							<Parm=
+								<Id="bullet_frequency">
+								<Value=5.000000>
+							>
+							<Parm=
+								<Id="bullet_lifetime">
+								<Value=5.000000>
+							>
+						>
 					>
 				>
 				<PhysicItem=
-					<SelfMask=4>
-					<Mask=7>
+					<SelfMask=0>
+					<Mask=0>
 					<LinearDamping_v2=1.000000>
 					<AngularDamping_v2=1.000000>
 					<CharacterRadius=1.000000>
 					<CharacterHeight=1.000000>
 					<CharacterMaxStep=0.200000>
-					<Mode="Dynamic">
+					<Mode="None">
 					<Shapes=
 						<PhysicShape=
 							<Type="Sphere">
@@ -1264,6 +1511,7 @@
 								<Y=1.000000>
 								<Z=1.000000>
 							>
+							<Mass=0.200000>
 							<StaticFriction=0.500000>
 							<DynamicFriction=0.500000>
 							<Restitution=0.500000>

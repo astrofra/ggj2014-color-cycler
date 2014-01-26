@@ -59,7 +59,7 @@ class	SceneManager
 		game_over.refresh()
 		SpriteSetOpacity(game_over.window, 0.0)
 
-		wave_label = Label(ui, 1024, 256, (1280 - 1024) * 0.5, (960 - 256) * 0.5)
+		wave_label = Label(ui, 1280, 256, (1280 - 1280) * 0.5, (960 - 256) * 0.5)
 		wave_label.label = "WAVE 0"
 		wave_label.label_color = 0xffffffff
 		wave_label.font = "visitor1"
@@ -100,6 +100,11 @@ class	SceneManager
 		dispatch = GoToStandBy
 	}
 
+	function 	WinGame()
+	{
+		EndGame()
+	}
+
 	function	OnUpdate(scene)
 	{
 		if (dispatch != 0)
@@ -137,6 +142,12 @@ class	SceneManager
 		WipeAllEnemies(scene)
 		StartWave()
 		dispatch = 0
+	}
+
+	function	CheatToBoss()
+	{
+		FreezeAllWaves()
+		StartBossPhase()
 	}
 
 	function	WipeAllEnemies(scene)
@@ -196,9 +207,25 @@ class	SceneManager
 		if (enemy_count <= 0)
 		{
 			wave++
-			FreezeAllWaves()
-			StartWave()
+			if (wave < 10)
+			{
+				FreezeAllWaves()
+				StartWave()
+			}
+			else
+			{
+				FreezeAllWaves()
+				StartBossPhase()
+			}
 		}
+	}
+
+	function	StartBossPhase()
+	{
+		wave_label.label = "BOSS !!!"
+		wave_label.refresh()
+		WindowSetCommandList(wave_label.window, "toalpha 0,0;toalpha 0.2,1.0;nop 0.5;toalpha 0.2,0.0;")
+		ItemGetScriptInstance(SceneFindItem(g_scene, "boss_head")).WakeUp()
 	}
 
 	function	RefreshEnemyCount()
