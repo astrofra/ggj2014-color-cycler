@@ -133,9 +133,9 @@ class	SceneManager
 		UISetCommandList(ui, "globalfade 0.1,0.0;")
 		WindowSetCommandList(game_over.window, "toalpha 0,0.25;toalpha 0.1,0.0;")
 		player_script.ResetGame(SceneFindItem(g_scene, "player"))
+		wave = 0
 		WipeAllEnemies(scene)
 		StartWave()
-		wave = 0
 		dispatch = 0
 	}
 
