@@ -168,7 +168,9 @@ class	SceneManager
 				if (ItemGetScriptInstanceCount(_item) > 0)
 				{
 					local	_script = ItemGetScriptInstance(_item)
+					_script.spawn_count = _script.wave_size
 					_script.generator_enabled = true
+					_script.start_timeout = 0.0
 					enemy_count += _script.wave_size
 				}
 

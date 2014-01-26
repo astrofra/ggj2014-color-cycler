@@ -1,0 +1,29 @@
+<Version=1.0>
+<Geometry=
+	<Vertex=
+		<Count=4>
+		<Data==48:48@
+8_iêÉÛÝ8_i8_éêÉÛÝ8_i8_iêÉÛ]8_é8_éêÉÛ]8_é>
+	>
+	<Polygon=
+		<Count=2>
+		<BindingCount=6>
+		<Data==40:40@
+-***-*******,*******-*******-***+*******>
+	>
+	<VNormal=
+		<Count=6>
+		<Data==18:18@
+*¨**¨**©**¨**¨**©*>
+	>
+	<UV=
+		<Count=1>
+		<Data==48:48@
+**ªi**********ªi**************ªi**ªi******ªi**ªi>
+	>
+	<Materials=
+		<MaterialRefEx=
+			<Name="assets/boss_head.nmm">
+		>
+	>
+>
