@@ -1392,6 +1392,10 @@
 								<Id="life">
 								<Value=3.000000>
 							>
+							<Parm=
+								<Id="invisible_color">
+								<Value=0.000000>
+							>
 						>
 					>
 				>
@@ -1514,6 +1518,10 @@
 							<Parm=
 								<Id="life">
 								<Value=2.000000>
+							>
+							<Parm=
+								<Id="invisible_color">
+								<Value=1.000000>
 							>
 						>
 					>
@@ -1638,6 +1646,10 @@
 								<Id="life">
 								<Value=2.000000>
 							>
+							<Parm=
+								<Id="invisible_color">
+								<Value=2.000000>
+							>
 						>
 					>
 				>
@@ -1687,6 +1699,7 @@
 						<Y=1.000000>
 						<Z=540.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -1917,7 +1930,6 @@
 						<Y=1.000000>
 						<Z=15.000000>
 					>
-					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
