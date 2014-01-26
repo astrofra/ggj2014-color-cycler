@@ -24,6 +24,8 @@ class	SceneManager
 	enemy_count			=	0
 	wave_label			=	0
 
+	color_timers		=	0
+
 	function	OnSetup(scene)
 	{
 		ui = SceneGetUI(scene)
@@ -65,6 +67,19 @@ class	SceneManager
 		wave_label.refresh()
 		SpriteSetOpacity(wave_label.window, 0.0)
 
+		color_timers = []
+		local	_pos_bar_x = 0.0
+		foreach(_tex_file in ["ui/red_bar.png", "ui/green_bar.png", "ui/blue_bar.png"])
+		{
+			local	texture = ResourceFactoryLoadTexture(g_factory, _tex_file)
+			local	_new_bar = UIAddSprite(ui, -1, texture, 8 + _pos_bar_x, 960 - 8 - TextureGetHeight(texture), TextureGetWidth(texture), TextureGetHeight(texture))
+			SpriteSetOpacity(_new_bar, 0.5)
+			_pos_bar_x += TextureGetWidth(texture)
+			_pos_bar_x += 8
+			color_timers.append(_new_bar)
+		}
+		
+
 		if (player_script == 0)
 			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
 
@@ -94,6 +109,11 @@ class	SceneManager
 	function	SetLifeBar(_life)
 	{
 		SpriteSetScale(life_bar, _life / 100.0, 1.0)
+	}
+
+	function	SetColorBar(_color_index, _level)
+	{
+		SpriteSetScale(color_timers[_color_index], _level / 100.0, 1.0)
 	}
 
 	function	GoToStandBy(scene)

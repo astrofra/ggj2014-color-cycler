@@ -81,6 +81,7 @@ class	Player
 	color_index				=	1
 	color_switch_timeout	=	Sec(1.0)
 	color_switch_clock		=	0
+	color_timers			=	0
 
 	music_manager			=	0
 
@@ -118,6 +119,15 @@ class	Player
 		music_manager = MusicHandler()
 	}
 
+	function	ResetColorTimers()
+	{	
+		print("Player::ResetColorTimers()")
+		color_timers = []
+		color_timers.append(100.0)
+		color_timers.append(100.0)
+		color_timers.append(100.0)
+	}
+
 	function	ResetGame(item)
 	{
 		local	_spawn_pos	=	ItemGetPosition(SceneFindItem(g_scene, "player_spawnpoint"))
@@ -126,10 +136,10 @@ class	Player
 		life = 100.0
 		color_index = 1
 		color_switch_clock = g_clock
+		ResetColorTimers()
 		RefreshPlayerColor(item)
 		music_manager.SelectMusic(color_index)
 		RefreshHud()
-		
 	}
 
 	function	RefreshPlayerColor(item)
@@ -160,6 +170,20 @@ class	Player
 			return
 		}
 
+		foreach(_idx, _color_timer in color_timers)
+		{
+			if (color_index != _idx)
+				color_timers[_idx] = Clamp(color_timers[_idx] + g_dt_frame * 60.0 / 10.0, 0.0, 100.0)
+			else
+			{
+				color_timers[_idx] = Clamp(color_timers[_idx] - g_dt_frame * 60.0 / 5.0, 0.0, 100.0)
+				if (color_timers[_idx] < 1.0)
+					SwitchToNextColor(item)
+			}
+		}
+
+		RefreshHud()
+
 		if (pad_device != 0)
 		{
 			pad_vector.x = DeviceInputValue(pad_device, DeviceAxisX)
@@ -171,16 +195,7 @@ class	Player
 			{
 				if (g_clock - color_switch_clock > SecToTick(color_switch_timeout))
 				{
-					color_index++
-					if (color_index >= g_color_list.len())
-						color_index = 0
-
-					RefreshPlayerColor(item)
-					music_manager.SelectMusic(color_index)
-
-					UISetCommandList(SceneGetUI(g_scene), "globalfade 0,0;globalfade 0.01,0.5;globalfade 0.5,0.0;globalfade 0,0;")
-
-					color_switch_clock = g_clock
+					SwitchToNextColor(item)
 				}
 			}
 		}
@@ -224,6 +239,20 @@ class	Player
 	//	print("angle = " + angle)
 	}
 
+	function	SwitchToNextColor(item)
+	{
+		color_index++
+		if (color_index >= g_color_list.len())
+			color_index = 0
+
+		RefreshPlayerColor(item)
+		music_manager.SelectMusic(color_index)
+
+		UISetCommandList(SceneGetUI(g_scene), "globalfade 0,0;globalfade 0.01,0.5;globalfade 0.5,0.0;globalfade 0,0;")
+
+		color_switch_clock = g_clock
+	}
+
 	function	OnPhysicStep(item, dt)
 	{
 		local	_force = Vector(0,0,0)
@@ -264,6 +293,8 @@ class	Player
 	function	RefreshHud()
 	{
 		SceneGetScriptInstance(g_scene).SetLifeBar(life.tofloat())
+		foreach(_idx, _col_bar in color_timers)
+			SceneGetScriptInstance(g_scene).SetColorBar(_idx, _col_bar)
 	}
 
 	function	HearSfxFromLocation(_sound_filename = "", _pos = Vector(0,0,0), far_distance = Mtr(15.0), sound_volume = 1.0)
