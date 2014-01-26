@@ -126,8 +126,9 @@ class	EnemyHandler
 		if (player_script == 0)
 			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
 
+		local	_rand = Rand(0.05,0.1)
 		if (invisible_color.tointeger() == player_script.color_index)
-			MaterialSetAmbient(body_mat, Vector(0.05,0.05,0.05))
+			MaterialSetAmbient(body_mat, Vector(_rand,_rand,_rand))
 		else
 			MaterialSetAmbient(body_mat, Vector(1,1,1))
 	}
@@ -273,6 +274,7 @@ class	EnemyGenerator
 		<spawn_frequency = <Name = "Spawn frequency (Hz)"> <Type = "Float"> <Default = 15.0>>
 		<enemy_name = <Name = "Enenmy item name"> <Type = "String"> <Default = "original_enemy_0">>
 		<wave_size = <Name = "Amount of enemies"> <Type = "Float"> <Default = 15.0>>
+		<start_after = <Name = "Start after (sec)"> <Type = "Float"> <Default = 0.5>>
 		<generator_enabled = <Name = "Enable"> <Type = "Bool"> <Default = True>>
 	>
 >*/
@@ -290,6 +292,8 @@ class	EnemyGenerator
 
 	wave_size				=	15
 	spawn_count				=	0
+	start_after				=	Sec(0.5)
+	start_timeout			=	0.0
 	generator_enabled		=	true
 
 	previous_enemy			=	0
@@ -318,6 +322,11 @@ class	EnemyGenerator
 			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
 
 		if (generator_enabled && player_script.life > 0.0)
+			start_timeout += g_dt_frame
+		else
+			start_timeout = 0.0 
+
+		if (generator_enabled && player_script.life > 0.0 && start_timeout > start_after)
 			Spawn()
 	}
 
