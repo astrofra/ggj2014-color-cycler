@@ -5,6 +5,7 @@
 
 Include("scripts/utils.nut")
 Include("scripts/bullet.nut")
+Include("scripts/music.nut")
 
 /*
 
@@ -44,6 +45,7 @@ class	Player
 		<color_switch_timeout = <Name = "Color switch timeout (sec)"> <Type = "Float"> <Default = 1.0>>
 	>
 >*/
+	keyboard_device		=	0
 	pad_device			=	0
 	pad_vector			=	0
 	pad_heading			=	0
@@ -78,6 +80,8 @@ class	Player
 	color_switch_timeout	=	Sec(1.0)
 	color_switch_clock		=	0
 
+	music_manager			=	0
+
 	bullet_item_name	=	"original_bullet_player"
 
 	function	OnSetup(item)
@@ -97,6 +101,7 @@ class	Player
 		item_matrix = ItemGetMatrix(item)
 		direction = Vector(0,0,1)
 
+		keyboard_device = GetKeyboardDevice()
 		pad_device = GetInputDevice("xinput0")
 
 		direction_item = ItemGetChild(item, "player_direction")
@@ -108,6 +113,7 @@ class	Player
  		cannon.bullet_frequency	= bullet_frequency
 		RefreshPlayerColor(item)
 		sfx_table = {}
+		music_manager = MusicHandler()
 	}
 
 	function	ResetGame(item)
@@ -119,6 +125,7 @@ class	Player
 		color_index = 1
 		color_switch_clock = g_clock
 		RefreshPlayerColor(item)
+		music_manager.SelectMusic(color_index)
 		RefreshHud()
 		
 	}
@@ -132,8 +139,17 @@ class	Player
 
 	function	OnUpdate(item)
 	{
+		music_manager.Update()
+
+		if (keyboard_device != 0 && DeviceIsKeyDown(keyboard_device, KeyEscape))
+		{
+			life = 0.0
+			SceneGetScriptInstance(g_scene).EndGame()
+		}
+
 		if (life <= 0.0)
 		{
+			music_manager.StopAllGameMusic()
 			pad_vector = pad_vector.Scale(0.5)
 			pad_heading = pad_heading.Scale(0.5)
 			return
@@ -155,6 +171,7 @@ class	Player
 						color_index = 0
 
 					RefreshPlayerColor(item)
+					music_manager.SelectMusic(color_index)
 
 					UISetCommandList(SceneGetUI(g_scene), "globalfade 0,0;globalfade 0.01,0.5;globalfade 0.5,0.0;globalfade 0,0;")
 
