@@ -1361,7 +1361,7 @@
 						<ParmList=
 							<Parm=
 								<Id="distance_to_player">
-								<Value=6.500000>
+								<Value=8.000000>
 							>
 							<Parm=
 								<Id="strength">
@@ -1397,7 +1397,7 @@
 							>
 							<Parm=
 								<Id="shooting_range">
-								<Value=7.500000>
+								<Value=9.000000>
 							>
 							<Parm=
 								<Id="bullet_lifetime">
@@ -1595,6 +1595,7 @@
 						<Y=1.000000>
 						<Z=520.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
