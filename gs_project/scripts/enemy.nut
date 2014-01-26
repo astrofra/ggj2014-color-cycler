@@ -14,6 +14,7 @@ class	EnemyHandler
 /*<
 	<Parameter =
 		<invisible_color = <Name = "Invisible color"> <Type = "Float"> <Default = 0.0>>
+		<invisible_opacity = <Name = "Invisible opacity [0.0,1.0]"> <Type = "Float"> <Default = 0.1>>
 		<distance_to_player = <Name = "Distance to player (m)"> <Type = "Float"> <Default = 5.0>>
 		<shooting_range = <Name = "Shooting range (m)"> <Type = "Float"> <Default = 5.0>>
 		<distance_rand = <Name = "Distance randomize (m)"> <Type = "Float"> <Default = 1.0>>
@@ -34,6 +35,7 @@ class	EnemyHandler
 	awaken				=	false
 	dying				=	false
 	invisible_color		=	0
+	invisible_opacity	=	0.1
 
 	body				=	0
 	body_mat			=	0
@@ -126,9 +128,8 @@ class	EnemyHandler
 		if (player_script == 0)
 			player_script = ItemGetScriptInstance(SceneFindItem(g_scene, "player"))
 
-		local	_rand = Rand(0.05,0.1)
 		if (invisible_color.tointeger() == player_script.color_index)
-			MaterialSetAmbient(body_mat, Vector(_rand,_rand,_rand))
+			MaterialSetAmbient(body_mat, Vector(invisible_opacity,invisible_opacity,invisible_opacity))
 		else
 			MaterialSetAmbient(body_mat, Vector(1,1,1))
 	}
