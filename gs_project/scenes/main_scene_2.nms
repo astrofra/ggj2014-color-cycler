@@ -40,6 +40,7 @@
 						<Y=0.000000>
 						<Z=0.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -91,6 +92,7 @@
 			>
 			<Object=
 				<Item=
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -908,7 +910,7 @@
 			<MItem=
 				<Id="New Light">
 				<UId=13>
-				<Active>
+				<Inactive>
 				<Priority=1.000000>
 				<MotionPlayer=
 					<Motions>
@@ -929,8 +931,9 @@
 					<Position=
 						<X=0.000000>
 						<Y=1.000000>
-						<Z=0.000000>
+						<Z=0.060453>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -1063,7 +1066,7 @@
 			<MItem=
 				<Id="New Light">
 				<UId=15>
-				<Active>
+				<Inactive>
 				<Priority=1.000000>
 				<MotionPlayer=
 					<Motions>
@@ -1086,6 +1089,7 @@
 						<Y=1.000000>
 						<Z=0.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -1218,7 +1222,7 @@
 			<MItem=
 				<Id="New Light">
 				<UId=17>
-				<Active>
+				<Inactive>
 				<Priority=1.000000>
 				<MotionPlayer=
 					<Motions>
@@ -1241,6 +1245,7 @@
 						<Y=1.000000>
 						<Z=0.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -1398,7 +1403,7 @@
 							>
 							<Parm=
 								<Id="invisible_opacity">
-								<Value=0.100000>
+								<Value=0.050000>
 							>
 						>
 					>
@@ -1529,7 +1534,7 @@
 							>
 							<Parm=
 								<Id="invisible_opacity">
-								<Value=0.100000>
+								<Value=0.050000>
 							>
 						>
 					>
@@ -1660,7 +1665,7 @@
 							>
 							<Parm=
 								<Id="invisible_opacity">
-								<Value=0.100000>
+								<Value=0.050000>
 							>
 						>
 					>
@@ -1984,6 +1989,7 @@
 						<Y=20.000000>
 						<Z=20.000000>
 					>
+					<ItemFlag>
 					<Target=
 						<X=0.000000>
 						<Y=0.000000>
@@ -1993,1014 +1999,6 @@
 					<Registry>
 				>
 				<Geometry="assets/plane_opaque.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=27>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=1.468408>
-						<Y=-0.180878>
-						<Z=1.039301>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=0.515745>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=28>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=-4.960973>
-						<Y=-0.180878>
-						<Z=7.106488>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=0.997455>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=29>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=6.101606>
-						<Y=-0.180878>
-						<Z=14.846376>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=0.515745>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=30>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=10.801993>
-						<Y=-0.494589>
-						<Z=-9.652318>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=1.049815>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=31>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=-11.909638>
-						<Y=-0.180878>
-						<Z=-12.266357>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=0.727802>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=32>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=-0.219092>
-						<Y=-0.180878>
-						<Z=-17.210880>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=0.997455>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=33>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=17.835434>
-						<Y=-0.180878>
-						<Z=12.440262>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=1.049815>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=34>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=-14.207273>
-						<Y=-0.180882>
-						<Z=13.572893>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=0.727802>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=35>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=12.324540>
-						<Y=-0.494593>
-						<Z=-0.204471>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=1.049815>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=36>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=8.076439>
-						<Y=-0.180882>
-						<Z=-15.705896>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=0.997455>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=37>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=-7.276978>
-						<Y=-0.180882>
-						<Z=15.788846>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=0.780162>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=38>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=-6.557482>
-						<Y=-0.494593>
-						<Z=-10.959563>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=0.785398>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=39>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=12.576925>
-						<Y=-0.180882>
-						<Z=10.363111>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=0.780162>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
-				<CacheGeometry=True>
-			>
-		>
-		<MObject=
-			<MItem=
-				<Id="rock">
-				<UId=40>
-				<Active>
-				<Priority=0.500000>
-				<MotionPlayer=
-					<Motions>
-				>
-				<PhysicItem=
-					<SelfMask=4>
-					<Mask=4>
-					<LinearDamping_v2=1.000000>
-					<AngularDamping_v2=1.000000>
-					<CharacterRadius=1.000000>
-					<CharacterHeight=1.000000>
-					<CharacterMaxStep=0.200000>
-					<Mode="Static">
-					<Shapes=
-						<PhysicShape=
-							<Type="Box">
-							<Position=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Rotation=
-								<X=0.000000>
-								<Y=0.000000>
-								<Z=0.000000>
-							>
-							<Scale=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<Dimensions=
-								<X=1.000000>
-								<Y=1.000000>
-								<Z=1.000000>
-							>
-							<StaticFriction=0.500000>
-							<DynamicFriction=0.500000>
-							<Restitution=0.500000>
-						>
-					>
-				>
-			>
-			<Object=
-				<Item=
-					<Position=
-						<X=-11.374786>
-						<Y=-0.494593>
-						<Z=-5.951301>
-					>
-					<Rotation=
-						<X=0.785398>
-						<Y=0.785398>
-						<Z=0.785398>
-					>
-					<Target=
-						<X=0.000000>
-						<Y=0.000000>
-						<Z=1.000000>
-					>
-					<RotationOrder="YXZ">
-					<Registry>
-				>
-				<Geometry="assets/cube.nmg">
 				<CacheGeometry=True>
 			>
 		>
@@ -4528,7 +3526,7 @@
 					<RotationOrder="YXZ">
 					<Registry>
 				>
-				<Geometry="F:/Game Making/Jam/GGJ2014/gs_project/assets/wall/Plane.nmg">
+				<Geometry="assets/wall/Plane.nmg">
 				<CacheGeometry=True>
 			>
 		>
@@ -4577,7 +3575,7 @@
 					<RotationOrder="YXZ">
 					<Registry>
 				>
-				<Geometry="F:/Game Making/Jam/GGJ2014/gs_project/assets/wall/Plane.nmg">
+				<Geometry="assets/wall/Plane.nmg">
 				<CacheGeometry=True>
 			>
 		>
@@ -4621,7 +3619,7 @@
 					<RotationOrder="YXZ">
 					<Registry>
 				>
-				<Geometry="F:/Game Making/Jam/GGJ2014/gs_project/assets/wall_corner/Plane.nmg">
+				<Geometry="assets/wall_corner/Plane.nmg">
 				<CacheGeometry=True>
 			>
 		>
@@ -4670,7 +3668,7 @@
 					<RotationOrder="YXZ">
 					<Registry>
 				>
-				<Geometry="F:/Game Making/Jam/GGJ2014/gs_project/assets/wall/Plane.nmg">
+				<Geometry="assets/wall/Plane.nmg">
 				<CacheGeometry=True>
 			>
 		>
@@ -4714,7 +3712,7 @@
 					<RotationOrder="YXZ">
 					<Registry>
 				>
-				<Geometry="F:/Game Making/Jam/GGJ2014/gs_project/assets/wall_corner/Plane.nmg">
+				<Geometry="assets/wall_corner/Plane.nmg">
 				<CacheGeometry=True>
 			>
 		>
@@ -4758,7 +3756,7 @@
 					<RotationOrder="YXZ">
 					<Registry>
 				>
-				<Geometry="F:/Game Making/Jam/GGJ2014/gs_project/assets/wall_corner/Plane.nmg">
+				<Geometry="assets/wall_corner/Plane.nmg">
 				<CacheGeometry=True>
 			>
 		>
@@ -4807,7 +3805,7 @@
 					<RotationOrder="YXZ">
 					<Registry>
 				>
-				<Geometry="F:/Game Making/Jam/GGJ2014/gs_project/assets/wall/Plane.nmg">
+				<Geometry="assets/wall/Plane.nmg">
 				<CacheGeometry=True>
 			>
 		>
@@ -4851,7 +3849,7 @@
 					<RotationOrder="YXZ">
 					<Registry>
 				>
-				<Geometry="F:/Game Making/Jam/GGJ2014/gs_project/assets/wall_corner/Plane.nmg">
+				<Geometry="assets/wall_corner/Plane.nmg">
 				<CacheGeometry=True>
 			>
 		>
@@ -4933,9 +3931,9 @@
 			<W=0.000000>
 		>
 		<R3=
-			<X=56.613087>
-			<Y=33.283634>
-			<Z=6.602956>
+			<X=50.471794>
+			<Y=28.999462>
+			<Z=10.989010>
 			<W=1.000000>
 		>
 	>
@@ -4966,9 +3964,9 @@
 					<W=0.000000>
 				>
 				<R3=
-					<X=56.613087>
-					<Y=33.283634>
-					<Z=6.602956>
+					<X=50.471794>
+					<Y=28.999462>
+					<Z=10.989010>
 					<W=1.000000>
 				>
 			>
