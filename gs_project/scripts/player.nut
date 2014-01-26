@@ -167,6 +167,11 @@ class	Player
 			SceneGetScriptInstance(g_scene).EndGame()
 		}
 
+		if (keyboard_device != 0 && DeviceIsKeyDown(keyboard_device, KeyB) && DeviceIsKeyDown(keyboard_device, KeyLCtrl))
+		{
+			SceneGetScriptInstance(g_scene).CheatToBoss()
+		}
+
 		if (life <= 0.0)
 		{
 			music_manager.StopAllGameMusic()
