@@ -43,8 +43,6 @@ class	Player
 		<bullet_speed = <Name = "Bullet speed"> <Type = "Float"> <Default = 1.0>>
 		<bullet_frequency = <Name = "Bullet frequency (Hz)"> <Type = "Float"> <Default = 15.0>>
 		<color_switch_timeout = <Name = "Color switch timeout (sec)"> <Type = "Float"> <Default = 1.0>>
-		<color_dec_speed = <Name = "Color decrease speed"> <Type = "Float"> <Default = 1.0>>
-		<color_inc_speed = <Name = "Color increase speed"> <Type = "Float"> <Default = 1.0>>
 	>
 >*/
 	keyboard_device		=	0
@@ -81,12 +79,10 @@ class	Player
 
 	main_light				=	0
 	color_index				=	1
+	prev_color_index		=	-1
 	color_switch_timeout	=	Sec(1.0)
 	color_switch_clock		=	0
 	color_timers			=	0
-
-	color_dec_speed			=	1.0
-	color_inc_speed			=	1.0
 
 	music_manager			=	0
 
@@ -140,6 +136,7 @@ class	Player
 		ItemPhysicResetTransformation(item, _spawn_pos, Vector(0,0,0))
 		life = 100.0
 		color_index = 1
+		prev_color_index = -1 
 		color_switch_clock = g_clock
 		ResetColorTimers()
 		RefreshPlayerColor(item)
@@ -175,17 +172,8 @@ class	Player
 			return
 		}
 
-		foreach(_idx, _color_timer in color_timers)
-		{
-			if (color_index != _idx)
-				color_timers[_idx] = Clamp(color_timers[_idx] + g_dt_frame * 60.0 / 10.0 * color_inc_speed, 0.0, 100.0)
-			else
-			{
-				color_timers[_idx] = Clamp(color_timers[_idx] - g_dt_frame * 60.0 / 10.0 * color_dec_speed, 0.0, 100.0)
-				if (color_timers[_idx] < 1.0)
-					SwitchToNextColor(item)
-			}
-		}
+		if (prev_color_index >= 0)
+			color_timers[prev_color_index] = Clamp(color_timers[prev_color_index] + g_dt_frame * 60.0 / 10.0, 0.0, 100.0)
 
 		RefreshHud()
 
@@ -198,7 +186,10 @@ class	Player
 
 			if (!DeviceWasKeyDown(pad_device, KeyButton0) && DeviceIsKeyDown(pad_device, KeyButton0))
 			{
-				SwitchToNextColor(item)
+				if (g_clock - color_switch_clock > SecToTick(color_switch_timeout))
+				{
+					SwitchToNextColor(item)
+				}
 			}
 		}
 
@@ -243,19 +234,16 @@ class	Player
 
 	function	SwitchToNextColor(item)
 	{
-		if (g_clock - color_switch_clock > SecToTick(color_switch_timeout))
-		{
-			color_index++
-			if (color_index >= g_color_list.len())
-				color_index = 0
+		color_index++
+		if (color_index >= g_color_list.len())
+			color_index = 0
 
-			RefreshPlayerColor(item)
-			music_manager.SelectMusic(color_index)
+		RefreshPlayerColor(item)
+		music_manager.SelectMusic(color_index)
 
-			UISetCommandList(SceneGetUI(g_scene), "globalfade 0,0;globalfade 0.01,0.5;globalfade 0.5,0.0;globalfade 0,0;")
+		UISetCommandList(SceneGetUI(g_scene), "globalfade 0,0;globalfade 0.01,0.5;globalfade 0.5,0.0;globalfade 0,0;")
 
-			color_switch_clock = g_clock
-		}
+		color_switch_clock = g_clock
 	}
 
 	function	OnPhysicStep(item, dt)
