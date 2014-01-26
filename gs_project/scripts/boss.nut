@@ -128,6 +128,8 @@ class	Boss	extends BossPart
 	bullet_frequency	=	5.0
 	bullet_lifetime		=	5.0
 
+	initial_position	=	0
+
 	function	OnSetup(item)
 	{
 		if ("OnSetup" in base)
@@ -136,6 +138,8 @@ class	Boss	extends BossPart
 		position_dt = Vector(0,0,0)
 		position = Vector(0,0,0)
 		velocity = Vector(0,0,0)
+
+		initial_position = ItemGetWorldPosition(item)
 
 		base.OnSetup(item)
 		boss_item_list = []
@@ -153,6 +157,13 @@ class	Boss	extends BossPart
 				boss_item_list.append(_item)
 
 		print("Boss::OnSetupDone() found " + boss_item_list.len().tostring() + " items in the boss rig.")
+		GoToSleep()
+	}
+
+	function	ResetBoss()
+	{
+		ItemSetPosition(body, initial_position)
+		died = false
 		GoToSleep()
 	}
 

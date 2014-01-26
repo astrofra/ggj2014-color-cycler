@@ -93,6 +93,8 @@ class	SceneManager
 
 	function 	EndGame()
 	{
+		game_over.label = "COLORCYCLER\nIS OVER"
+		game_over.refresh()
 		local	_chan = MixerStartStream(g_mixer, "audio/M_Iddleloose.ogg")
 		MixerChannelSetGain(g_mixer, _chan, 1.0)
 		MixerChannelSetPitch(g_mixer, _chan, 1.0)
@@ -103,6 +105,8 @@ class	SceneManager
 	function 	WinGame()
 	{
 		EndGame()
+		game_over.label = "COLORCYCLER\nWON"
+		game_over.refresh()
 	}
 
 	function	OnUpdate(scene)
@@ -138,6 +142,7 @@ class	SceneManager
 		UISetCommandList(ui, "globalfade 0.1,0.0;")
 		WindowSetCommandList(game_over.window, "toalpha 0,0.25;toalpha 0.1,0.0;")
 		player_script.ResetGame(SceneFindItem(g_scene, "player"))
+		ItemGetScriptInstance(SceneFindItem(g_scene, "boss_head")).ResetBoss()
 		wave = 0
 		WipeAllEnemies(scene)
 		StartWave()

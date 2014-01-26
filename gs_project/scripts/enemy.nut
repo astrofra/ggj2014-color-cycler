@@ -265,7 +265,13 @@ class	EnemyHandler
 	function	Die(item)
 	{
 		dispatch = 0
-		SceneDeleteItem(g_scene, item)
+		if (ItemGetName(item).tolower().find("boss_head") != null)
+		{
+			ItemGetScriptInstance(item).died =	true
+			SceneGetScriptInstance(g_scene).WinGame()
+		}
+		else
+			SceneDeleteItem(g_scene, item)
 	}
 }
 
