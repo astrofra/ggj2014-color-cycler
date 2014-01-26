@@ -1,0 +1,40 @@
+<Version=1.0>
+<Geometry=
+	<Vertex=
+		<Count=6>
+		<Data==73:72@
+***************j***********j**ªi**jj**ªé**ªi**jj*******ê******ªé
+***ê**jj>
+	>
+	<Polygon=
+		<Count=2>
+		<BindingCount=8>
+		<Data==48:48@
+.***,***-*******+*******.***-***/***.***********>
+	>
+	<PNormal=
+		<Count=2>
+		<Data==6:6@
+*²R¢*R>
+	>
+	<VNormal=
+		<Count=8>
+		<Data==24:24@
+*²R{Ù`{Ù`*²R{Ù`¢*R¢*R{Ù`>
+	>
+	<VTangent=
+		<Count=8>
+		<Data==48:48@
+«***²ÑÑ*P¸ÑÑ*P¸«***²ÑÑ*P¸*«*R*²*«*R*²ÑÑ*P¸>
+	>
+	<UV=
+		<Count=1>
+		<Data==64:64@
+**********ªi******ªi**ªi******ªi**********ªi******ªi**ªi******ªi>
+	>
+	<Materials=
+		<MaterialRefEx=
+			<Name="assets/wall/unnamed.nmm">
+		>
+	>
+>

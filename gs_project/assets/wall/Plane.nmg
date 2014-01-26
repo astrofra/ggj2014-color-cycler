@@ -1,0 +1,29 @@
+<Version=1.0>
+<Geometry=
+	<Vertex=
+		<Count=4>
+		<Data==48:48@
+**ªé**ªi**jj**ªé**********ªi**********ªi**ªi**jj>
+	>
+	<Polygon=
+		<Count=1>
+		<BindingCount=4>
+		<Data==24:24@
+.***+***,***-***********>
+	>
+	<VNormal=
+		<Count=4>
+		<Data==12:12@
+*²R*²R*²R*²R>
+	>
+	<UV=
+		<Count=1>
+		<Data==32:32@
+**ªi**ªi******ªi**********ªi****>
+	>
+	<Materials=
+		<MaterialRefEx=
+			<Name="assets/wall/unnamed.nmm">
+		>
+	>
+>
