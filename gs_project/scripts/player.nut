@@ -74,7 +74,7 @@ class	Player
 	life				=	0.0
 
 	main_light				=	0
-	color_index				=	0
+	color_index				=	1
 	color_switch_timeout	=	Sec(1.0)
 	color_switch_clock		=	0
 
@@ -106,6 +106,7 @@ class	Player
 		cannon = CannonHandler(bullet_item_name)
 		cannon.bullet_speed = bullet_speed
  		cannon.bullet_frequency	= bullet_frequency
+		RefreshPlayerColor(item)
 		sfx_table = {}
 	}
 
@@ -115,9 +116,10 @@ class	Player
 		ItemSetPosition(item, _spawn_pos)
 		ItemPhysicResetTransformation(item, _spawn_pos, Vector(0,0,0))
 		life = 100.0
-		RefreshHud()
-		color_index = 0
+		color_index = 1
+		color_switch_clock = g_clock
 		RefreshPlayerColor(item)
+		RefreshHud()
 		
 	}
 
@@ -144,7 +146,7 @@ class	Player
 			pad_heading.x = DeviceInputValue(pad_device, DeviceAxisS)
 			pad_heading.z = DeviceInputValue(pad_device, DeviceAxisT)
 
-			if (DeviceKeyPressed(pad_device, KeyButton0))
+			if (!DeviceWasKeyDown(pad_device, KeyButton0) && DeviceIsKeyDown(pad_device, KeyButton0))
 			{
 				if (g_clock - color_switch_clock > SecToTick(color_switch_timeout))
 				{
