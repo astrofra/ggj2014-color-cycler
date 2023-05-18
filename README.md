@@ -9,6 +9,8 @@ This game was entirely created within 48h, during the GGJ held in [Isart Digital
 4 people contributed to this developpement, in charge of the programming, 2D art, game design, level design, music and sound FX.
 Runs only on MS Windows platform, based on the GameStart3D framework.
 
+_The game was done in 48h (Global Game Jam rules)._
+
 **Jam Site:** Global Game Jam Paris - ISART DIGITAL<br>
 **Jam year:** 2014<br>
 **Platforms:** MS Windows<br>
