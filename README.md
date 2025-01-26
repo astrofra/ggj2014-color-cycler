@@ -1,4 +1,4 @@
-CO-CY (Color Cycler)
+GGJ2014 CO-CY (Color Cycler)
 ====================
 
 Game project created for the Global Game Jam 2014, Isart Digital, Paris.
